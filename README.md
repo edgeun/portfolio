@@ -2,7 +2,7 @@
 
 안녕하세요, 여러분!  🌟
 
-초보자도 쉽게 배울 수 있도록 오라클 RAC 수업 내용을 정리하였습니다.
+초보자도 쉽게 배울 수 있도록 오라클 SQL 튜닝 내용을 정리하였습니다.
 
 <img src="https://github.com/edgeun/portfolio-2024/blob/main/001.png" width="600" height="400">
 
