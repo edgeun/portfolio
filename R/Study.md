@@ -7,16 +7,16 @@
 
 - **예제 2. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#c29cf97518aa489aa22f3613e1931b1e)
 
-- **예제 3. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 3. SQL과 R과의 차이점은 무엇인가?**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
 
-- **예제 4. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 4. R의 자료 구조 5가지**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#7ff337a474cc44668f6cfa3c494cb3f8)
 
-- **예제 5. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 5. 데이터 검색하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#ddf8868974234d46809d72e7ae6338e9)
 
-- **예제 6. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 6. R 연산자 3가지**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#e2193b65d16e4a348ff2aafbe5c5bbb9)
 
-- **예제 7. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 7. 연결 연산자**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#c7a934d042874c708e787f4ec2958197)
 
-- **예제 8. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 8. 여러개의 데이터 검색 (%in%)**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#13b1cd89afb74a58be93dd22c02c7cee)
 
-- **예제 8. R과 R STUDIO 설치하기**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#df893ec5361c43a1a13c3d4eddcf751a)
+- **예제 9. 결측치 데이터 검색 함수 (is.na)**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#fbc56c4b23794bb9893b8000dfb23425)
