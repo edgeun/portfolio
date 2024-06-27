@@ -41,14 +41,14 @@
 
 - **튜닝 예제 15. 결합 컬럼 인덱스 구성시 컬럼순서가 중요합니다.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 16. INDEX SKIP SCAN 을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 16. INDEX SKIP SCAN 을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 17. INDEX FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 17. INDEX FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 18. INDEX FAST FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 18. INDEX FAST FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 19. INDEX BITMAP MERGE SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 19. INDEX BITMAP MERGE SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 20. INDEX UNIQUE SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 20. INDEX UNIQUE SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-**튜닝 예제 21. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 21. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
