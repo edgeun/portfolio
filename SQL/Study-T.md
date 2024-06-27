@@ -3,7 +3,6 @@
 
 <img src="https://github.com/edgeun/portfolio-2024/blob/main/001.png" width="600" height="400">
 
-&nbsp;
 
 ## 수업 자료(☀️ 2024년 6월 27일 updated)
 
