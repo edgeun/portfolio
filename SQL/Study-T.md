@@ -65,3 +65,23 @@
 - **튜닝 예제 29. OUTER JOIN은 이렇게 튜닝해야합니다**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#b913b0c697ea4fd78ac41ca563c82311)
 
 - **튜닝 예제 30. 3개 이상의 테이블을 조인할 때 조인 방법을 다양하게 조절할 줄 알아야 해요**: 📝[노트](https://edgeun.notion.site/0620_SQL-_3-163442f4675e461597eca3c85023dad8#338aa3d12985436a8782871ed1175b67)
+
+- **튜닝 예제 31. 선택적 조인을 하면서 조인의 성능을 높일 수 있어요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#10587f5ca33744d4b7e7f9e8923b5bb3)
+
+- **튜닝 예제 32. IN LINE VIEW와 조인할 때는 IN LINE VIEW가 해체 되지 않게 하세요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#b4fd490f43a540abbcaf5fc22ac1aa0d)
+
+- **튜닝 예제 33. 뷰와 조인을 할 때 조인을 할 때 조인 순서를 조정할 수 있어요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#6bb649489fc64f839b5eb53e1871432f)
+
+- **튜닝 예제 34. 조인의 성능을 높이고 싶다면 MVIEW 생성을 고려하세요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#fd95cbf2ee3b49e896dae5432bb7ba0e)
+
+- **튜닝 예제 35. 서브 쿼리문에서 서브쿼리의 데이터가 작으면 서브 쿼리부터 수행되게 해야해요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#48a834204e5e47a88f665093f3e09669)
+
+- **튜닝 예제 36. PUSH_SUBQ 와 NO_PUSH_SUBQ 와의 짝꿍 힌트를 알아야 해요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#a993b7d531df41d0b3f8152779fefa98)
+
+- **튜닝 예제 37. 서브 쿼리를 세미 조인으로 변경해서 수행되게 하세요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#cf9160aade044376b4b237347a63650f)
+
+- **튜닝 예제 38. HASH SEMI JOIN도 서브 쿼리부터 수행되게 할 수 있어요**: 📝[노트](https://edgeun.notion.site/0624_SQL-_-HASH-SEMI-JOIN-256d281eddc74c8eb1cd1d288a6ef00e#a5b4d55b7ae948c5a62e5328c4a03eaf)
+
+- **튜닝 예제 39. NOT IN 연산자를 사용한 서브 쿼리문을 튜닝할 줄 알아야해요**: 📝[노트](https://edgeun.notion.site/0625_SQL-_NOT-IN-f8c67f2642924653951993b97d5b3f17#d3b948a0801f4d0abbd1a0c46d593ded)
+
+- **튜닝 예제 40. ### IN 연산자를 EXISTS로 변경해서 튜닝할 줄 알아야해요**: 📝[노트](https://edgeun.notion.site/0625_SQL-_NOT-IN-f8c67f2642924653951993b97d5b3f17#9cd61960f69543839680324a406ebddf)
