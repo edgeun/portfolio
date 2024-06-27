@@ -27,19 +27,19 @@
 
 - **튜닝 예제 8. ORDER BY절을 통한 과도한 정렬 작업을 피하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#5c73bde870504ccbb9aed14acffb0e7e)
 
-- **튜닝 예제 9. 그룹함수 대신에 인덱스를 사용해서 SQL을 튜닝하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 9. 그룹함수 대신에 인덱스를 사용해서 SQL을 튜닝하세요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#3dbb2ef8011c4e909ab7ac35c90821df)
 
-- **튜닝 예제 10. 인덱스를 엑세스 하지 못하는 검색조건을 알아야해요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 10. 인덱스를 엑세스 하지 못하는 검색조건을 알아야해요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#ea5cba7c1ddb46dabd443f1b61694ae1)
 
-- **튜닝 예제 11. FULL TABLE SCAN을 할 수 밖에 없다면 FULL TABLE SCAN이 빠르게 되도록 튜닝하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 11. FULL TABLE SCAN을 할 수 밖에 없다면 FULL TABLE SCAN이 빠르게 되도록 튜닝하세요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#dbb6a285ec704a1aaead3626a667bac7)
 
-- **튜닝 예제 12. 인덱스를 탈 수 있도록 힌트를 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 12. 인덱스를 탈 수 있도록 힌트를 사용하세요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#c83098fca1ba42f2a301f4b2ea6334ac)
 
-- **튜닝 예제 13. 훌륭한 인덱스 2개를 같이 사용하여 시너지 효과를 볼 수 있어요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 13. 훌륭한 인덱스 2개를 같이 사용하여 시너지 효과를 볼 수 있어요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#47ed332c68034e40b11e443db6c058ac)
 
-- **튜닝 예제 14. 테이블 랜덤 엑세스를 줄이기 위해 결합 컬럼 엑세스를 활용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 14. 테이블 랜덤 엑세스를 줄이기 위해 결합 컬럼 엑세스를 활용하세요.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#31ccf8efe7424cceb9d412216e8fb28c)
 
-- **튜닝 예제 15. 결합 컬럼 인덱스 구성시 컬럼순서가 중요합니다.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 15. 결합 컬럼 인덱스 구성시 컬럼순서가 중요합니다.**: 📝[노트](https://edgeun.notion.site/0617_SQL-_-657c9b7ed95041db8a02c69225c73438#570d7902e5864f77ba6ce41849d10c0a)
 
 - **튜닝 예제 16. INDEX SKIP SCAN 을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
