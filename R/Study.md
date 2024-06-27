@@ -20,3 +20,11 @@
 - **예제 8. 여러개의 데이터 검색 (%in%)**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#13b1cd89afb74a58be93dd22c02c7cee)
 
 - **예제 9. 결측치 데이터 검색 함수 (is.na)**:  📄[노트](https://edgeun.notion.site/0626_R_R-is-na-32a87a7dc296439995d250f818afc76f#fbc56c4b23794bb9893b8000dfb23425)
+
+- **예제 10. 범위 데이터 검색**:  📄[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#b28f8ab0eb5540cca9de9b5695f8f1f9)
+
+- **예제 11. 특정 철자로 검색하기**:  📄[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#7f7e3f4656104925accb9179fd43fca2)
+
+- **예제 12. 중복 데이터 제거**:  📄[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#7d39817c886745959ce803171c19e530)
+
+- **예제 13. 데이터 정렬하기**:  📄[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#bcec851a7d514701921bb1cca0707b85)
