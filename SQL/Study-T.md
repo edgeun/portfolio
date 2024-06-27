@@ -45,7 +45,7 @@
 
 - **튜닝 예제 17. INDEX FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#0e883f7c78a14094916e094b385cd16b)
 
-- **튜닝 예제 18. INDEX FAST FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 18. INDEX FAST FULL SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#bed63071df114083b7571e89ccdfaa9d)
 
 - **튜닝 예제 19. INDEX BITMAP MERGE SCAN을 사용하세요.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#3cee55611fb04020a802283da0d5f398)
 
