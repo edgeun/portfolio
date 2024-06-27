@@ -15,17 +15,17 @@
   
 - **튜닝 예제 2. OPTIMIZER**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
-- **튜닝 예제 3. 실행 계획의 종류 2가지**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 3. 실행 계획의 종류 2가지**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#5c9f42d449b742bfb0c69ce01c590aca)
 
-- **튜닝 예제 4. WHERE절에 인덱스 컬럼을 가공하지 마세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 4. WHERE절에 인덱스 컬럼을 가공하지 마세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#fb20717ad92445c09282691f38265972)
 
-- **튜닝 예제 5. HAVING절에 일반 검색 조건을 쓰지 마세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 5. HAVING절에 일반 검색 조건을 쓰지 마세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#da7847fbc54e4ace814847164db3ae48)
 
-- **튜닝 예제 6. WHERE에 인덱스 컬럼 가공이 불가피하다면 함수 기반 인덱스를 생성하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 6. WHERE에 인덱스 컬럼 가공이 불가피하다면 함수 기반 인덱스를 생성하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#81d2e288c40a471085f3ed4bced6b651)
 
-- **튜닝 예제 7. 암시적 형변환에 주의하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 7. 암시적 형변환에 주의하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#7ced7c5092954c26bf0e00110f3ae40d)
 
-- **튜닝 예제 8. ORDER BY절을 통한 과도한 정렬 작업을 피하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
+- **튜닝 예제 8. ORDER BY절을 통한 과도한 정렬 작업을 피하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#5c73bde870504ccbb9aed14acffb0e7e)
 
 - **튜닝 예제 9. 그룹함수 대신에 인덱스를 사용해서 SQL을 튜닝하세요.**: 📝[노트](https://edgeun.notion.site/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1#85c82d79b47e47b88182486629d43609)
 
