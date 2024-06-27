@@ -50,7 +50,7 @@
 
 - **튜닝 예제 22. 검색조건에 따라 조인 순서를 잘 정해줘야합니다**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#a064287e77fb47e8b9cebe025de5ad6c)
 
-- **튜닝 예제 23. 조인되는 데이터의 양이 작을 때는 nested loop조인으로 조인하세요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#b8b22a73c96d4c088caa3b0015fc06c9)
+- **튜닝 예제 23. 조인되는 데이터의 양이 작을 때는 NESTED LOOP 조인으로 조인하세요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#b8b22a73c96d4c088caa3b0015fc06c9)
 
 - **튜닝 예제 24. 3개 이상의 테이블을 NESTED LOOP 조인으로 조인할 때 힌트 사용법을 알아야해요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#3eee59e0a81e40f0a3a4f9f0f61ef875)
 
