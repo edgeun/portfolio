@@ -57,36 +57,16 @@
 
 - **튜닝 예제 23. 조인되는 데이터의 양이 작을 때는 nested loop조인으로 조인하세요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#b8b22a73c96d4c088caa3b0015fc06c9)
 
-- **튜닝 예제 24. 3개 이상의 테이블을 NESTED LOOP 조인으로 조인할 때 힌트 사용법을 알아야해요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 24. 3개 이상의 테이블을 NESTED LOOP 조인으로 조인할 때 힌트 사용법을 알아야해요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#3eee59e0a81e40f0a3a4f9f0f61ef875)
 
-- **튜닝 예제 25. 대량의 데이터를 조인할 때는 해쉬 조인을 사용하세요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 25. 대량의 데이터를 조인할 때는 해쉬 조인을 사용하세요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#527da713c81b44e2855fcb935e082354)
+  
+- **튜닝 예제 26. 3개의 테이블을 해쉬 조인 할 때 해쉬 테이블을 선택할 수 있어요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#922886614103478093955f8285253177)
 
-- **튜닝 예제 26. 3개의 테이블을 해쉬 조인 할 때 해쉬 테이블을 선택할 수 있어요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 27. 해쉬 조인이 안되는 연산자가 있어요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#2d88f0dac0fc47e2a1dce0a8615719e2)
 
-- **튜닝 예제 27. 해쉬 조인이 안되는 연산자가 있어요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 28. 대량의 테이블을 조인하는데 해쉬조인을 할 수 없다면 SORT MERGE JOIN을 하세요**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#0a6fd91239ac47528eb57c4e6ec3d0ec)
 
-- **튜닝 예제 28. 대량의 테이블을 조인하는데 해쉬조인을 할 수 없다면 SORT MERGE JOIN을 하세요**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 29. OUTER JOIN은 이렇게 튜닝해야합니다**: 📝[노트](https://edgeun.notion.site/0619_SQL-_NESTED-LOOP-OUTER-JOIN-55d3af39e95945258b028cc2ce6bc681#b913b0c697ea4fd78ac41ca563c82311)
 
-- **튜닝 예제 29. OUTER JOIN은 이렇게 튜닝해야합니다**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 30. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 31. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 32. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 33. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 34. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 35. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 36. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 37. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 38. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 39. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
-
-- **튜닝 예제 40. 조인 문장을 튜닝 할 때 조인 순서 튜닝이 중요합니다.**: 📝[노트](https://edgeun.notion.site/0618_SQL-_INDEX-SKIP-SCAN-850b25934c5447b3b2c5d29b750a02f8#de2edc2462d747069187c2d7b7803e9d)
+- **튜닝 예제 30. 3개 이상의 테이블을 조인할 때 조인 방법을 다양하게 조절할 줄 알아야 해요**: 📝[노트](https://edgeun.notion.site/0620_SQL-_3-163442f4675e461597eca3c85023dad8#338aa3d12985436a8782871ed1175b67)
