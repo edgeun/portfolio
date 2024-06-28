@@ -28,3 +28,37 @@
 - **예제 12. 중복 데이터 제거**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#7d39817c886745959ce803171c19e530)
 
 - **예제 13. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#bcec851a7d514701921bb1cca0707b85)
+
+- **예제 14. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#44b27df5f59e449e93849fd166e9ae19)
+
+- **예제 15. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#ea21a5b9ac98472c9953548f50f93ed9)
+
+- **예제 16. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#26bc0204587a4cf7bd53cfeb54640fed)
+
+- **예제 17. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#1b7d8e596cec48dabe0b601635f1c337)
+
+- **예제 18. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#63c3fbffc1d84b3a856fe7454287d0f7)
+
+- **예제 19. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#13ac0042fe274609b19ad9ecf68fc6a1)
+
+- **예제 20. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#7fce041db69c40f29195b1e54698c818)
+
+- **예제 21. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0627_R_-e69a09e41d1342e7b7b79d965fe5aea7#4919fa001c064447ad1acf4618e86397)
+
+- **예제 22. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#2a1928b17a854c2287ee2b9d6f2a6976)
+
+- **예제 23. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#55dbea69e0c640a99228ee85b7560ace)
+
+- **예제 24. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#0886fe5f6780462c876a966ec712300f)
+
+- **예제 25. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#bcfe8f61ff7a49efafcebb2a06f63a9e)
+
+- **예제 26. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#d5be0c6b436747c4a1c6bf6530cfed8c)
+
+- **예제 27. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#1df51e1bc44648429d2f385ae87a756b)
+
+- **예제 28. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#9e4f1f9ada394f8aa4ef45091eefa9ef)
+
+- **예제 29. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#9488d8772b8643d589f913f117924e86)
+
+- **예제 30. 데이터 정렬하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#0aaf69c2fed14041b90619737514a163)
