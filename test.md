@@ -20,7 +20,8 @@ select  job, empno, ename, sal, sum(sal) over (partition by job order by empno a
 select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
 ```
 
-![Untitled](0626_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_CBT%20%E1%84%89%E1%85%B5%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%8B%E1%85%A8%E1%84%89%E1%85%A1%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%91%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%B5%205f43f3ad48194ca4b2bb930526ab5d2f/Untitled.png)
+![Un![Untitled 1](https://github.com/edgeun/portfolio-2024/assets/60956291/579685c4-f551-446b-bbd5-3d4d3e7836fc)
+
 
 ### **이수자 평가 예상 문제 1)**
 
