@@ -43,40 +43,4 @@ tnsnames.ora ← 내가 접속할 오라클 DB의 정보를 등록해줍니다.
 
 SQL Developer 재실행하고 새로만들기 - 데이터베이스 접속 선택하고 이름 my db 입력하고 사용자 이름/비밀번호 입력하고 접속 유형 TNS 선택하고 네트워크 별칭 XE로 설정
 
-![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%204.png)
-
-문제 2) 짝꿍 pc의 오라클 데이터 베이스에 c##scott 유저로 접속하세요
-
-나의 tnsnames.ora의 tns 별칭의 이름을 내 영문 이니별로 변경합니다.
-
-```sql
-ldg =
-  (DESCRIPTION =
-    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-A90JR87)(PORT = 1521))
-    (CONNECT_DATA =
-      (SERVER = DEDICATED)
-      (SERVICE_NAME = XE)
-    )
-  )
-```
-
-```sql
-ksj =
-  (DESCRIPTION =
-    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-2JMR03K)(PORT = 1521))
-    (CONNECT_DATA =
-      (SERVER = DEDICATED)
-      (SERVICE_NAME = XE)
-    )
-  )
-```
-
-짝꿍의 tns 정보를 나의 tnsnames.ora 파일의 맨 밑에 복사&붙여넣기
-
-![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%205.png)
-
-⇒ 짝꿍의 DB에 접속해서 짝꿍이 생성한 테이블들을 확인할 수 있음
-
----
-
-만약 어느 회사에 db 분석을 하러 갔으면 담당자에게 <db 에 접속할 수 있는 tnsnames.ora에 등록할 tns 정보를 주세요>라고 애기하면 무슨말이 알아듣고 알려줍니다.
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%8얘기하면 무슨말이 알아듣고 알려줍니다.
