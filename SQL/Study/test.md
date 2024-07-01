@@ -1,0 +1,881 @@
+# 0614_SQL 튜닝_SELECT 문의 실행과정 3단계 ~ ORDER BY절 대체
+
+### 📋 목차
+
+[튜닝 1.  SELECT 문의 실행과정 3단계](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 2. OPTIMIZER](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 3. 실행 계획의 종류 2가지](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 4. WHERE절에 인덱스 컬럼을 가공하지 마세요.](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 5. HAVING절에 일반 검색 조건을 쓰지 마세요.](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 6.  WHERE에 인덱스 컬럼 가공이 불가피하다면 함수 기반 인덱스를 생성하세요.](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 7. 암시적 형변환에 주의하세요.](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+[튜닝 8. ORDER BY절을 통한 과도한 정렬 작업을 피하세요.](https://www.notion.so/0614_SQL-_SELECT-3-ORDER-BY-31af5d2c9de3408aab685a9d020ff7e1?pvs=21)
+
+---
+
+(점심 문제) 아래의 SQL을 regexp_like 함수로 수행하세요
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled.png)
+
+```sql
+select ename
+ from emp19
+ where not regexp_like(ename, '^(김|문|이|서|윤)');
+```
+
+---
+
+**※ 파생변수에 관해서**
+
+조원들끼리 회의를 하는 많은 시간의 대부분이 파생변수 생각해내는일입니다. 새로 들어온 신입사원이 생각한 파생변수도 유심히 경청해서 만들어 보고 적용한다고 합니다.
+
+SQL 포트폴리오를 머신러닝으로 한다면 이 파생변수를 좋은걸 하나라도 만들어서 정확도나 상관계수가 올라가는지를 분석한다면 아주 좋은 포트폴리오가 될겁니다.
+
+---
+
+### 데이터 분석가와 데이터 엔지니어를 위한 SQL튜닝 수업
+
+[이지업_실무에서 바로 쓰는 SQL 튜닝방법_20240110.pdf](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/%25EC%259D%25B4%25EC%25A7%2580%25EC%2597%2585_%25EC%258B%25A4%25EB%25AC%25B4%25EC%2597%2590%25EC%2584%259C_%25EB%25B0%2594%25EB%25A1%259C_%25EC%2593%25B0%25EB%258A%2594_SQL_%25ED%258A%259C%25EB%258B%259D%25EB%25B0%25A9%25EB%25B2%2595_20240110.pdf)
+
+SQL 튜닝 기술은 SQL 작성하는 직업을 갖는 사람이면 꼭 필수로 배워야하는 기술입니다.
+
+- SQL 튜닝과 관련된 진로 ?
+    1. 데이터 분석가
+    2. 데이터 엔지니어
+    3. SQL 개발자
+    4. 프로그래머
+- 관련된 자격증
+    1. SQLP (SQL 전문가 자격증)
+    2. SQLD (SQLD의 뒷부분에 해당하는 과목)
+
+---
+
+### 튜닝 1.  SELECT 문의 실행과정 3단계
+
+- select 문의 처리과정
+
+```sql
+select ename, sal
+ from emp
+ where ename = 'SCOTT';
+```
+
+1. 파싱(parsing) : SQL을 기계어로 변환하는 작업
+2. 실행(execute) : 실행계획대로 검색하는 데이터를 DB에서 찾는 과성
+3. 패치(fetch) : DB에서 찾은 결과를 SQL을 수행한 유저 프로세서에게 전달
+
+문제 1) 실제로 회사에 가면 내 노트북에서 회사 서버실에 오라클 데이터베이스에 어떻게 접속을 하는가?
+
+내 노트북 ———————————————————> 서버
+
+tnsnames.ora ← 내가 접속할 오라클 DB의 정보를 등록해줍니다.
+
+오라클 설치 폴더에서 listener.ora 파일을 찾는다.
+
+(C:\app\itwill\product\21c\homes\OraDB21Home1\network\admin)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%201.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%202.png)
+
+---
+
+시스템 속성 → 환경 변수 → 아래쪽 시스템 변수에 새로 만들기
+
+변수 이름 TNS_ADMIN으로 지정하고(**반드시 대문자로 작성할 것) 변수 값에 아까 tnsnames.ora 파일이 들어있던 폴더 경로를 복사해서 변수 값에 붙여넣기
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%203.png)
+
+SQL Developer 재실행하고 새로만들기 - 데이터베이스 접속 선택하고 이름 my db 입력하고 사용자 이름/비밀번호 입력하고 접속 유형 TNS 선택하고 네트워크 별칭 XE로 설정
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%204.png)
+
+문제 2) 짝꿍 pc의 오라클 데이터 베이스에 c##scott 유저로 접속하세요
+
+나의 tnsnames.ora의 tns 별칭의 이름을 내 영문 이니별로 변경합니다.
+
+```sql
+ldg =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-A90JR87)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = XE)
+    )
+  )
+```
+
+```sql
+ksj =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = DESKTOP-2JMR03K)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = XE)
+    )
+  )
+```
+
+짝꿍의 tns 정보를 나의 tnsnames.ora 파일의 맨 밑에 복사&붙여넣기
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%205.png)
+
+⇒ 짝꿍의 DB에 접속해서 짝꿍이 생성한 테이블들을 확인할 수 있음
+
+---
+
+만약 어느 회사에 db 분석을 하러 갔으면 담당자에게 <db 에 접속할 수 있는 tnsnames.ora에 등록할 tns 정보를 주세요>라고 애기하면 무슨말이 알아듣고 알려줍니다.
+
+---
+
+### 튜닝 2. OPTIMIZER
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%206.png)
+
+옵티마이저(optimizer) 란? SQL을 가장 효율적이고 빠르게 수행할 수 있는 최적의 처리 경로를 선택해주는 오라클 핵심 엔진입니다.
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%207.png)
+
+⇒ SQL이 들어오면 Query transformer가 SQL을 변경을 합니다. 변경이 필요없으면 안하고 변경이 필요하면 변경을 합니다. 그리고 나서 estimator가 데이터 딕셔너리(user_tables)를 보고 해당 테이블의 통계정보를 이용해서 실행계획을 plan generator에게 만들 수 있도록 합니다.
+
+문제 3) 아래의 SQL을 query tranformer가 어떻게 변경했는지 확인하세요
+
+```sql
+select ename, sal, job
+ from emp
+ where job in ('SALESMAN', 'ANALYST');
+```
+
+이걸 확인하는 이유 : 내가 원하는 실행계획이 안 나오는 경우에 확인합니다.
+
+```sql
+explain plan for
+select ename, sal, job
+ from emp
+ where job in ('SALESMAN', 'ANALYST');
+ 
+select * from table(dbms_xplan.display);
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%208.png)
+
+⇒ SQL이 where절에 사용한 in을 자체적으로 or 문으로 변경해버림 ⇒ 결과가 달라지지 않으면서 비용이 적게드는 SQL로 변경을 스스로합니다.
+
+문제 4) 아래의 SQL을 어떻게 쿼리 변형을 했는지 확인하세요
+
+```sql
+explain plan for
+select deptno, job, sum(sal)
+ from emp
+ group by grouping sets((deptno),(job));
+ 
+select * from table(dbms_xplan.display);
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%209.png)
+
+⇒ temp table transformation 이라고 나오면 with절로 쿼리를 변형한겁니다.
+
+---
+
+### 튜닝 3. 실행 계획의 종류 2가지
+
+1. 예상 실행 계획 : SQL을 실행하기 전에 옵티마이저가 생성한 실행계획
+2. 실제 실행 계획 : SQL을 실제로 실행할 때 사용한 실제 실행 계획
+
+그럼 언제 예상 실행 계획을 보고 언제 실제 실행계획을 봐야하는가?
+
+⇒ 튜닝해야 할 쿼리문이 너무 오래 돌면 예상 실행 계획을 보고 어느 정도 기다릴 수 있는 쿼리문이면 실제 실행 계획을 봅니다.
+
+### 예상 실행 계획 보는 방법 (explain plan for)
+
+```sql
+explain plan for
+select deptno, job, sum(sal)
+ from emp
+ group by grouping sets((deptno),(job));
+ 
+select * from table(dbms_xplan.display);
+```
+
+### 실제 실행 계획 보는 방법 (/*+ gather_plan_statistics */  힌트)
+
+```sql
+select /*+ gather_plan_statistics */ deptno, job, sum(sal)
+ from emp
+ group by grouping sets((deptno),(job));
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2010.png)
+
+⇒ 예상 실행 계획과 실제 실행 계획의 차이점은 실제 실행 계획에는 buffers가 출력되는데 이 수치로 SQL 튜닝 후 성능 향상의 척도를 알 수 있기 때문에 SQL 튜닝을 하고 buffer의 정보를 클라이언트에게 전달함으로써 성능이 좋아진 것을 보고할 수 있음
+
+문제 5) 아래의 SQL의 튜닝 전 SQL의 버퍼의 갯수와 튜닝 후 SQL의 버퍼의 갯수를 비교해서 고객에게 메일로 보내세요
+
+```sql
+create index emp_job on emp(job);
+```
+
+- 튜닝 전
+
+```sql
+select /*+ gather_plan_statistics */ ename, job
+ from emp
+ where substr(job, 1, 5) = 'SALES';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2011.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2012.png)
+
+- 튜닝 후
+
+```sql
+select /*+ gather_plan_statistics */ ename, job
+ from emp
+ where job like 'SALES%';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2013.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2014.png)
+
+문제 6) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_hiredate on emp(hiredate);
+```
+
+- 튜닝 전
+
+```sql
+select /*+ gather_plan_statistics */ ename, hiredate
+ from emp
+ where to_char(hiredate, 'RRRR') = '1980';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2015.png)
+
+- 튜닝 후
+
+```sql
+SELECT /*+ gather_plan_statistics */ ename, hiredate
+FROM emp
+WHERE hiredate BETWEEN TO_DATE('1980/01/01', 'YYYY/MM/DD') 
+                   AND TO_DATE('1980/12/31 23:59:59', 'YYYY/MM/DD HH24:MI:SS');
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2016.png)
+
+⇒ ‘1980/12/31’ 뒤에 +1을 적어주는 이유는 날짜까지만 적으면 해당 마지막 날짜의 00시에 해당되므로, 해당 날짜의 나머지 시간(~24시까지)를 포함하지 않는 값이므로 끝에 +1을 붙여준다. (정확히는 + 1 ‘DAY’ - 1 ‘SECOND’)
+
+하지만 이것도 +1을 해버리면 다음 날(’81/01/01’)의 00시도 포함되어버리므로
+
+정확히는 ‘1980/12/31:23:59:59’을 적거나 아예 between절을 사용하지 않고 부등호로 ‘1981/01/01’보다 작다로 적어준다.
+
+---
+
+### 튜닝 4. WHERE절에 인덱스 컬럼을 가공하지 마세요.
+
+where절에 인덱스 컬럼을 가공하게 되면 full table scan을 하게 됩니다.
+
+관련 예제)
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+- 튜닝 전
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal
+ from emp
+ where sal * 12 = 36000;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2017.png)
+
+- 튜닝 후
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal
+ from emp
+ where sal = 36000 / 12;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2018.png)
+
+문제 7) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_ename on emp(ename);
+create index emp_sal on emp(sal);
+```
+
+- 튜닝 전
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal, job
+ from emp
+ where ename || sal = 'SCOTT3000';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2019.png)
+
+- 튜닝 후
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal, job
+ from emp
+ where ename = 'SCOTT' and sal = '3000';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+문제 8) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_job on emp(job);
+create index emp_deptno on emp(deptno);
+```
+
+- 튜닝 전
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal, job
+ from emp
+ where job || deptno = 'SALESMAN30';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2020.png)
+
+- 튜닝 후
+
+```sql
+select /*+ gather_plan_statistics */ ename, sal, job
+ from emp
+ where job = 'SALESMAN' and deptno = '30';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2021.png)
+
+문제 9) /*+ gather_plan_statistics */ 힌트 없이 실제 실행 계획에서 버퍼의 갯수를 볼 수 있도록 설정하세요
+
+```sql
+alter system set statistics_level = all;
+shutdown immediate
+startup
+
+show parameter statistics_level
+```
+
+⇒ statistics_level 이라는 파라미터가 default값이 typical인데 이를 all로 변경하면 앞으로 힌트 /*+ gather_plan_statistics */ 를 쓰지 않아도 됩니다.
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2022.png)
+
+문제 10) 힌트 /*+ gather_plan_statistics */ 쓰지 않고 실제 실행 계획을 봐보세요
+
+```sql
+select ename, sal, job
+ from emp
+ where job = 'SALESMAN' and deptno = '30';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2023.png)
+
+---
+
+### 튜닝 5. HAVING절에 일반 검색 조건을 쓰지 마세요.
+
+having절은 group함수로 검색조건을 줄 때만 사용해야합니다.
+
+일반 검색 조건을 주게 되면 인덱스를 엑세스 하지 못하게 됩니다.
+
+관련 예제)
+
+```sql
+create index emp_job on emp(job);
+```
+
+- 튜닝 전
+
+```sql
+select job, sum(sal)
+ from emp
+ group by job
+ having sum(sal) > 5000 and job ='SALESMAN';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2024.png)
+
+- 튜닝 후
+
+```sql
+select job, sum(sal)
+ from emp
+ where job = 'SALESMAN'
+ group by job
+ having sum(sal) > 5000;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2025.png)
+
+⇒  job에 대한 검색 조건은 where절에 적어줘야 됨
+
+문제 11) 아래의 SQL을 튜닝 하세요
+
+```sql
+create index emp_deptno on emp(deptno);
+```
+
+- 튜닝 전
+
+```sql
+select deptno, avg(sal)
+ from emp
+ group by deptno
+ having avg(sal) > 2000 and deptno = 20;
+
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+- 튜닝 후
+
+```sql
+select deptno, avg(sal)
+ from emp
+ where deptno = 20
+ group by deptno
+ having avg(sal) > 2000;
+
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2026.png)
+
+---
+
+### 튜닝 6.  WHERE에 인덱스 컬럼 가공이 불가피하다면 함수 기반 인덱스를 생성하세요.
+
+```sql
+insert into emp(empno, ename, sal) values(1111, ' jack ', 3000);
+create index emp_ename on emp(ename);
+```
+
+- 튜닝 전
+
+```sql
+select ename, sal
+ from emp
+ where trim(ename) = 'jack';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+- 튜닝 후
+
+```sql
+create index emp_ename_func on emp(trim(ename)); 
+
+select ename, sal
+ from emp
+ where trim(ename) = 'jack';
+
+select * from  table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+문제 12) 아래의 SQL을 튜닝하세요 (SQL 전문가 시험 출제 문제)
+
+```sql
+create index emp_ename on emp(ename);
+```
+
+- 튜닝 전
+
+```sql
+select ename, sal
+ from emp
+ where ename like '%EN%' or ename like '%IN%';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2027.png)
+
+⇒ 와일드카드(%)가 앞뒤로 있으면 무조건 FULL TABLE SCAN 입니다.
+
+- 튜닝 후
+
+```sql
+create index emp_ename_func on emp(regexp_like(ename, '(EN|IN)')); -- 생성 안됨 에러남
+
+select ename, sal
+ from emp
+ where regexp_like(ename, '(EN|IN)');
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+⇒ 정규 표현식 함수로는 함수 기반 인덱스를 생성할 수 없습니다. 위와 같이 중간 데이터를 검색하는 SQL 튜닝 방법은 뒤에서 튜닝 합니다.
+
+```sql
+create index emp_ename_func on emp regexp_like(ename, '(EN|IN)');
+
+select /*+ index(emp emp_ename_reg) */ ename, sal
+ from emp
+ where regexp_like(ename, '(EN|IN)'); 
+
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+⇒ /*+ index(테이블 인덱스이름) */  이렇게 힌트를 주면 인덱스를 스캔 합니다.
+
+문제 13) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp19_ename on emp19(ename);
+```
+
+- 튜닝 전
+
+```sql
+select ename, age
+ from emp19
+ where ename like '%연우%' or
+       ename like '%진우%' or
+       ename like '%동현%';
+       
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+- 튜닝 후
+
+```sql
+create index emp19_ename_func on emp19 regexp_like(ename, '(연우|진우|동현)');
+
+select ename, age
+ from emp19
+ where regexp_like(ename, '(연우|진우|동현)');
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+---
+
+### 튜닝 7. 암시적 형변환에 주의하세요.
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+- 튜닝 전
+
+```sql
+select ename, sal
+ from emp
+ where sal like '30%';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2028.png)
+
+- 튜닝 후
+
+```sql
+create index emp_sal_tochar on emp(to_char(sal));
+
+select ename, sal
+ from emp
+ where sal like '30%';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2029.png)
+
+문제 14) 아래의 환경을 만들고 아래의 SQL을 튜닝하세요
+
+```sql
+drop  table  emp9000;
+
+create  table  emp9000
+( ename   varchar2(10),
+   sal    varchar2(10) );
+
+insert   into  emp9000  values('scott', '3000');
+insert   into  emp9000  values('smith', '1000');
+insert   into  emp9000  values('allen', '2000');
+commit;
+
+create  index emp9000_sal  on  emp9000(sal);
+```
+
+- 튜닝 전
+
+```sql
+select  ename, sal
+ from  emp9000
+ where sal = 3000;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2030.png)
+
+- 튜닝 후
+
+```sql
+select  ename, sal
+ from  emp9000
+ where sal = '3000';
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2031.png)
+
+⇒ 애초에 sal의 컬럼을 문자열(varchar2)로 생성했기 때문에 sal에 3000을 검색하면 숫자 → 문자로 암시적 형변환이 일어나 full table scan을 합니다. 그렇기 때문에 3000에 ‘ ‘을 둘러서 문자형으로 변환해야 index scan을 해서 buffer의 갯수가 줄어듭니다.
+
+⇒ SQL을 재작성 할 수 있으면 SQL 재작성하는게 먼저입니다. 인덱스를 만드는 것은 아주 값비싼 작업입니다.
+
+### 현장 튜닝 사례
+
+튜닝 내용 :  8월 4일 16시 11분 부산지원 청구 1호기에서 DB FILE SCATTRED READ 대기 이벤트를 일으키면서 47초 이상 수행되는 SQL 발견하여 관련된 SQL 튜닝. (튜닝전 47초 --> 튜닝후 1초)
+
+☞  문제의 SQL 을 수행한 프로그램 정보및 DB 유져정보
+
+```sql
+DB SCHEMA :  HIRA_LINK
+OS USER : BWJF01
+SYSTEM ID: ORA8
+MACHINE : bonbu01
+PROGRAM : @bonbu01 (TNS V1-V3)
+```
+
+☞  튜닝전 SQL 과 TRACE 정보
+
+```sql
+SELECT "RECV_NO" ,
+       "RECV_YYYY" ,
+       "BRCH_CD" ,
+       "RECV_DATA_TYPE" ,
+       "YKIHO" ,
+       "DMD_TYPE_CD" ,
+       "PAY_SYS_TYPE" ,
+       "RECV_DT" ,
+       "EDPS_RECV_CLOS_YN" ,
+       "DIAG_YYYYMM" ,
+       "TOT_DMD_CNT" ,
+       "RETN_TYPE"
+ FROM  "TBJFC02" "TBJFC02"
+ WHERE TO_NUMBER( "RECV_DT" ) >= 20060724
+ AND   TO_NUMBER( "RECV_DT" ) <= 20060805
+ AND   "RECV_DATA_TYPE" = '1'
+ AND ( "DMD_TYPE_CD" = '2'
+ OR    "DMD_TYPE_CD" = '3' )
+ AND   "PAY_SYS_TYPE" = 'A'
+ AND   "RETN_TYPE" IS NULL
+ AND   "EDPS_RECV_CLOS_YN" = 'Y'
+ AND   SUBSTR( "YKIHO" , 3 , 1 ) <> '9';
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2032.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2033.png)
+
+☞  튜닝후 SQL 과 TRACE 정보
+
+```sql
+SELECT "RECV_NO" ,
+       "RECV_YYYY" ,
+       "BRCH_CD" ,
+       "RECV_DATA_TYPE" ,
+       "YKIHO" ,
+       "DMD_TYPE_CD" ,
+       "PAY_SYS_TYPE" ,
+       "RECV_DT" ,
+       "EDPS_RECV_CLOS_YN" ,
+       "DIAG_YYYYMM" ,
+       "TOT_DMD_CNT" ,
+       "RETN_TYPE"
+ FROM  "TBJFC02" "TBJFC02"
+ WHERE "RECV_DT" >= '20060724'
+ AND   "RECV_DT"  <= '20060805'
+ AND   "RECV_DATA_TYPE" = '1'
+ AND ( "DMD_TYPE_CD" = '2'
+ OR    "DMD_TYPE_CD" = '3' )
+ AND   "PAY_SYS_TYPE" = 'A'
+ AND   "RETN_TYPE" IS NULL
+ AND   "EDPS_RECV_CLOS_YN" = 'Y'
+ AND   SUBSTR( "YKIHO" , 3 , 1 ) <> '9';
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2034.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2035.png)
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2036.png)
+
+---
+
+### 튜닝 8. ORDER BY절을 통한 과도한 정렬 작업을 피하세요.
+
+order by 절을 사용해서 SQL을 작성하게 되면 오라클은 내부적으로 정렬 작업을 수행하기 위해 오라클 메모리인 pga 영역에서 정렬 작업을 수행합니다. 그런데 이 pga 영역이 한정된 메모리 영역이기 때문에 너무 과도한 정렬 작업을 해야한다면 db에 부하를 주게 됩니다.
+
+그래서 만약 인덱스를 활용할 수 있다면 order by 절 쓰지말고 인덱스를 통해서 정렬된 결과를 보는 튜닝 방법입니다.
+
+다음과 같이 인덱스를 생성하면 인덱스의 구조는 컬럼값 + rowid로 되어있고 컬럼값은 ascending하게 정렬되어 저장되게 됩니다.
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2037.png)
+
+테이블에 rowid 를 조회하세요
+
+```sql
+select rowid, e.*
+ from emp  e;
+```
+
+rowid가 해당 로우의 주소입니다.  이 주소가 테이블에도 있고 인덱스에도 있습니다.
+
+문제 15) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+- 튜닝 전
+
+```sql
+select ename, sal
+ from emp
+ order by sal asc;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2038.png)
+
+- 튜닝 후
+
+```sql
+select ename, sal
+ from emp
+ where sal >= 0;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2039.png)
+
+⇒ order by절의 정렬 기능 자체가 성능을 많이 잡아먹으므로 buffer의 갯수가 많이 나오는데 (인덱스를 먼저 생성한 후 where절에 인덱스 컬럼을 가지고) 행마다 가지고 있는 숨겨져 있는 고유의 rowid를 활용해서 sal이 0보다 같거나 크다라는 부등호 식으로 order by절을 사용하지 않고 정렬을 하면서 buffer의 갯수도 줄일 수 있다.
+
+### 인덱스를 스캔할 때 사용하는 힌트 2가지
+
+1. index_asc 힌트 : 인덱스를 위에 아래로 ascending 하게 스캔하겠다.
+2. index_desc 힌트 : 인덱스를 밑에 위로 descending 하게 스캔하겠다.
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+문제 16) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_sal on emp(sal);
+```
+
+- 튜닝 전
+
+```sql
+select ename, sal
+ from emp
+ order by sal desc;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+- 튜닝 후
+
+```sql
+select /*+ index_desc(emp  emp_sal) */ ename, sal
+ from emp
+ where sal >= 0 ;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+### ※ 인덱스의 데이터를 모두 다 스캔하는 where절 검색 조건
+
+1. 숫자 >= 0
+2. 문자 > ‘  ‘
+3. 날짜 < to_date(’9999/12/31’, ‘RRRR/MM/DD’)
+
+문제 17) (마지막 문제) 아래의 SQL을 튜닝하세요
+
+```sql
+create index emp_hiredate on emp(hiredate);
+```
+
+- 튜닝 전
+
+```sql
+select ename, hiredate
+ from emp
+ order by hiredate desc;
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2040.png)
+
+- 튜닝 후
+
+```sql
+select /*+ index_desc(emp  emp_hiredate) */ ename, hiredate
+ from emp
+ where hiredate < to_date('9999/12/31', 'RRRR/MM/DD');
+ 
+select * from table(dbms_xplan.display_cursor(null, null, 'ALLSTATS LAST'));
+```
+
+![Untitled](0614_SQL%20%E1%84%90%E1%85%B2%E1%84%82%E1%85%B5%E1%86%BC_SELECT%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8B%E1%85%B4%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%203%E1%84%83%E1%85%A1%E1%86%AB%E1%84%80%E1%85%A8%20~%20O%2031af5d2c9de3408aab685a9d020ff7e1/Untitled%2041.png)
+
+⇒ 인덱스 힌트로 정렬하고 where절에 검색 조건으로 날짜의 컬럼 값이 모두 나오게 ‘9999/12/31’보다 작은 값을 검색하는 검색 조건을 붙인다.
