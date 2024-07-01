@@ -59,3 +59,19 @@
 - **예제 29. R에서 OUTER JOIN 하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#9488d8772b8643d589f913f117924e86)
 
 - **예제 30. R에서 SELF JOIN 하기**:  📝[노트](https://edgeun.notion.site/0628_R_-MAX-SELF-JOIN-f95a489c1f4a43468d73fe81f4c81800#0aaf69c2fed14041b90619737514a163)
+
+- **예제 31. 구글 코랩을 이용하여 R로 데이터 분석하기**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#28bdaecc08024e978531836e47b57bea)
+
+- **예제 32. R의 집합연산자**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#0ffa3ab503544491b98631d4c23b785e)
+
+- **예제 33. R에서의 서브쿼리**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#377c7672c3bf4050b8cabdd06a878152)
+
+- **예제 34. R에서의 순위 출력**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#4459f69e76b04d0199a53cd18a16dc9b)
+
+- **예제 35. R에서의 함수 생성 방법**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#e51915c2fd6c4a1ab30ba2ec52fac0f2)
+
+- **예제 36. R에서의 if문 작성법**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#b16ad93376d14b0a9428a2c92130a86d)
+
+- **예제 37. R에서의 loop문 작성법**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#a36cae934e1743a6aa2a453d98b495cd)
+
+- **예제 38. 데이터 시각화 1 (막대그래프)**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#4fe6bc32a6714deea96f47d53275441b)
