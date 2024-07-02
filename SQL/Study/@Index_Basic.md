@@ -18,4 +18,28 @@
 
 - **예제 9. 산술 연산자 배우기 (*, /, +, -)**:  📝[노트](https://edgeun.notion.site/0510_SQL_-LIKE-4a27479509b946a0ab7e1b507ba2b48f#996bb9b39d2d4e22bbcb4c88ed60e357)
 
-- **예제 10. 비교 연산자 배우기 (>, <, >=, <=, =, !=, <>, ^=)**:  📝[노트](https://edgeun.notion.site/0510_SQL_-LIKE-4a27479509b946a0ab7e1b507ba2b48f#57ef206a58714e4086a339d7bd0f6a0a)
+- **예제 10. 비교 연산자 배우기 1 (>, <, >=, <=, =, !=, <>, ^=)**:  📝[노트](https://edgeun.notion.site/0510_SQL_-LIKE-4a27479509b946a0ab7e1b507ba2b48f#57ef206a58714e4086a339d7bd0f6a0a)
+
+- **예제 11. 비교 연산자 배우기 2 (BETWEEN ~ AND)**:  📝[노트](https://edgeun.notion.site/0510_SQL_-LIKE-4a27479509b946a0ab7e1b507ba2b48f#9383bc094ae440068e7416840c269d07)
+
+- **예제 12. 비교 연산자 배우기 3 (LIKE)**:  📝[노트](https://edgeun.notion.site/0510_SQL_-LIKE-4a27479509b946a0ab7e1b507ba2b48f#9fb29b560b124ba8b5d8ef39805376c4)
+
+- **예제 13. 비교 연산자 배우기 (>, <, >=, <=, =, !=, <>, ^=)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#1537e337ad9e46af9d7ef2b4a056e358)
+
+- **예제 14. 비교 연산자 배우기 5 (IN)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#c5f95f0212414904ad372d5050d5c32d)
+
+- **예제 15. 논리 연산자 배우기 (AND, OR, NOT)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#aa68f37c5ed94e8eb252d43309db071d)
+
+- **예제 16. 대소문자 변환 함수 배우기 (UPPER, LOWER, INITCAP)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#afefb2a715bc42c5a4bc9fc8449130e4)
+
+- **예제 17. 문자에서 특정 철자 추출하기 (SUBSTR)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#037a6636961242e2bcf9d41895c8f655)
+
+- **예제 18. 문자열의 길이를 출력하기 (LENGTH)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#84bf97c663114f04806dcc2f646878e6)
+
+- **예제 19. 문자에서 특정 철자의 위치 출력하기 (INSTR)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#1f1308c648164be98bfcfcc605b5fa4d)
+
+- **예제 20. 특정 철자를 다른 철자로 변경하기 (REPLACE)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#0324e682fb9140e5a896c8490b4fe045)
+
+- **예제 21. 특정 철자를 N개 만큼 채우기 (RPAD, LPAD)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#ad6980d7c9224adb8d3f87b9bc338d1e)
+
+- **예제 22. 특정 철자 잘라내기(TRIM, RTRIM, LTRIM)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#05ffbbee07f1471089b0eee6352374e3)
