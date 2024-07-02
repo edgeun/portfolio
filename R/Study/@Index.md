@@ -75,3 +75,12 @@
 - **예제 37. R에서의 loop문 작성법**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#a36cae934e1743a6aa2a453d98b495cd)
 
 - **예제 38. 데이터 시각화 1 (막대그래프)**:  📝[노트](https://edgeun.notion.site/0628_R_-R-1-7430a0a903c64ab0ac11e369f1f6bfa0#4fe6bc32a6714deea96f47d53275441b)
+
+- **예제 39. 데이터 시각화 2 (원형그래프)**:  📝[노트](https://edgeun.notion.site/0702_R_-87bfbd1b28444bf886c759ac996eb4ef#b0cb14c683e44927bf6daa35bb6b7c76)
+
+- **예제 40. 데이터 시각화 3 (산포도그래프)**:  📝[노트](https://edgeun.notion.site/0702_R_-87bfbd1b28444bf886c759ac996eb4ef#f188ef34d92f43bab444554b710ad5de)
+
+- **예제 41. 데이터 시각화 4 (라인그래프)**:  📝[노트](https://edgeun.notion.site/0702_R_-87bfbd1b28444bf886c759ac996eb4ef#630bd8a411b14d4d9939868ec533409f)
+
+- **예제 42. 데이터 시각화 5 (히스토그램 그래프)**:  📝[노트](https://edgeun.notion.site/0702_R_-87bfbd1b28444bf886c759ac996eb4ef#8659aeb988194647bb11460149c961f9)
+
