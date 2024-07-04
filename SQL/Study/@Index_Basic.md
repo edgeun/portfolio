@@ -43,3 +43,21 @@
 - **예제 21. 특정 철자를 N개 만큼 채우기 (RPAD, LPAD)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#ad6980d7c9224adb8d3f87b9bc338d1e)
 
 - **예제 22. 특정 철자 잘라내기(TRIM, RTRIM, LTRIM)**:  📝[노트](https://edgeun.notion.site/0513_SQL_-IS-NULL-TRIM-959ad88efae84f90a96c5405c23c1a95#05ffbbee07f1471089b0eee6352374e3)
+
+- **예제 23. 반올림해서 출력하기 (ROUND)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#10b7b54f927c42338b2512751ad89d0e)
+
+- **예제 24. 숫자를 버리고 출력하기 (TRUNC)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#18d6058ff0434fb8b217b712bedbc1e9)
+
+- **예제 25. 나눈 나머지 값 출력하기 (MOD)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#1dfaa89b6dd54956aeca90eec267fbaf)
+
+- **예제 26. 날짜 간 개월 수 출력하기 (MONTHS_BETWEEN)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#ee243f87bbc949ec9b1f5bc50847bb13)
+
+- **예제 27. 개월 수 더한 날짜 출력하기 (ADD_MONTHS)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#d743f159fe7e4aefb037e77d7dc39a1a)
+
+- **예제 28. 특정 날짜 뒤에 오는 요일 날짜 출력하기 (NEXT_DAY)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#d246779f6349435ba517020118643c91)
+
+- **예제 29. 특정 날짜가 있는 달의 마지막 날짜 (LAST_DAY)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#fb487efceac04bf19a5f3a80282bc961)
+
+- **예제 30. 문자형으로 데이터 유형 변환하기 (TO_CHAR)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#a5fbbdac105f4818a01a4222a69d65f5)
+
+- **예제 31. 날짜형으로 데이터 유형 변환하기 (TO_DATE)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#ef5b0c6b73ef4767be4cd3aedb98bb8e)
