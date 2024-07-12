@@ -91,3 +91,29 @@
 - **예제 45. 데이터 시각화 8 (지도 그래프)**:  📝[노트](https://edgeun.notion.site/0704_R_-8-9-1682002a0e2f4e3dadf51d8aa00dce09#30f0a5cb8dce4fbfae8bd4be6e722bb3)
 
 - **예제 46. 데이터 시각화 9 (소리 데이터 시각화)**:  📝[노트](https://edgeun.notion.site/0704_R_-8-9-1682002a0e2f4e3dadf51d8aa00dce09#aeb74034075042b59581f342d62da046)
+
+- **예제 47. 데이터 시각화 10 (사회 연결망 그래프)**:  📝[노트](https://edgeun.notion.site/0708_R_-10-f5aa65864f744d1cb13aacd2ddadba07#4faad63cade74443a968d8dc8db16263)
+
+- **예제 48. 머신러닝을 배우기 전에 알아야할 R 문법 1 (팩터)**:  📝[노트](https://edgeun.notion.site/0708_R_-10-f5aa65864f744d1cb13aacd2ddadba07#511432591f7246a89890d7b0daa42a7d)
+
+- **예제 49. R 에서 데이터를 로드하는 4가지 방법**:  📝[노트](https://edgeun.notion.site/0708_R_-10-f5aa65864f744d1cb13aacd2ddadba07#adfc199726e64e919c1f073f3c8d43d9)
+
+- **예제 50. 데이터의 전반적인 관찰 (평균, 중앙, 최빈, 표준편차, 분산)**:  📝[노트](https://edgeun.notion.site/0708_R_-10-f5aa65864f744d1cb13aacd2ddadba07#63907c97f19a478fa313f436218b475c)
+
+- **예제 51. 왜도와 첨도**:  📝[노트](https://edgeun.notion.site/0709_R_-b2a205c85fd3472bb3a5ef28e14f3ee5#96c1013c681b48cba290ba23bf3f4e1c)
+
+- **예제 52. 산포도 그래프와 상관계수**:  📝[노트](https://edgeun.notion.site/0709_R_-b2a205c85fd3472bb3a5ef28e14f3ee5#b394cfa1aadb426b969f024a6f208247)
+
+- **예제 53. 이원 교차표 분석하기**:  📝[노트](https://edgeun.notion.site/0709_R_-b2a205c85fd3472bb3a5ef28e14f3ee5#95a7e236ee3545bba44c63ebcfe4e9a6)
+
+- **예제 54. KNN 머신러닝 알고리즘**:  📝[노트](https://edgeun.notion.site/0710_R_KNN-4595bd0f6caa4a4a90d0d331ce4cbf50#056ed169c8bb45f2858211de32ec739c)
+
+- **예제 55. 주성분 분석**:  📝[노트](https://edgeun.notion.site/0711_R_-f310995056ef49b3a3e138eaeae53985#b481fffd701541d3bed50aa5c3651d51)
+
+- **예제 56. 이원 교차표의 거짓 긍정과 거짓 부정 해석**:  📝[노트](https://edgeun.notion.site/0711_R_-f310995056ef49b3a3e138eaeae53985#a1dc930fa0194068b76d5d02d379358e)
+
+- **예제 57. 나이브 베이즈 확률 알고리즘**:  📝[노트](https://edgeun.notion.site/0711_R_-f310995056ef49b3a3e138eaeae53985#6c81696f829f48e7886670dd834628fc)
+
+- **예제 58. 나이브 베이즈 모델의 성능을 높이는 하이퍼 파라미터 (라플라스 수치값)**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#339886ad333444ca998792dd589dc31a)
+
+- **예제 59. 규칙 기반 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
