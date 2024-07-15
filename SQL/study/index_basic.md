@@ -61,3 +61,23 @@
 - **예제 30. 문자형으로 데이터 유형 변환하기 (TO_CHAR)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#a5fbbdac105f4818a01a4222a69d65f5)
 
 - **예제 31. 날짜형으로 데이터 유형 변환하기 (TO_DATE)**:  📝[노트](https://edgeun.notion.site/0514_SQL_-ROUND-TO_DATE-7486517a592146d2b813c7b6cb5a406a#ef5b0c6b73ef4767be4cd3aedb98bb8e)
+
+- **예제 32. 암시적 형 변환 이해하기**:  📝[노트](https://edgeun.notion.site/0516_SQL_-SQL-CASE-IF-2efa16a3a40e43359e1ce2a15a3933dd#088d760ab85b4a1188b2d196185cbf63)
+
+- **예제 33. Null 값 대신 다른 데이터 출력하기 (NVL, NVL2)**:  📝[노트](https://edgeun.notion.site/0516_SQL_-SQL-CASE-IF-2efa16a3a40e43359e1ce2a15a3933dd#ea690c6f7fbb4abb95e591e8392c21f3)
+
+- **예제 34. if문을 SQL로 구현하기 1 (DECODE)**:  📝[노트](https://edgeun.notion.site/0516_SQL_-SQL-CASE-IF-2efa16a3a40e43359e1ce2a15a3933dd#f7fb438dbdcd48178d1461dea80082b1)
+
+- **예제 35. if문을 SQL로 구현하기 2 (CASE)**:  📝[노트](https://edgeun.notion.site/0516_SQL_-SQL-CASE-IF-2efa16a3a40e43359e1ce2a15a3933dd#c4cec967f1be475e9b54bdcf7a4fa75b)
+
+- **예제 36. 최대값 출력하기 (MAX)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#e6ca8578dc864cf486f33d92cd3cdca8)
+
+- **예제 37. 최솟값 출력하기 (MIN)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#a181e55c9369424fbe185f7003f17fac)
+
+- **예제 38. 평균값 출력하기 (AVG)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#0f7fec4214a9474cbc4c03304bf4b71d)
+
+- **예제 39. 토탈값 출력하기 (SUM)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#5f61dc20f0fe419f8704688b1484fff4)
+
+- **예제 40. 건수 출력하기 (COUNT)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#9b07dc489a9843698e21050ee8de0d5e)
+
+- **예제 41. 데이터 분석 함수로 순위 출력하기 (RANK)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#c142d1e863ea46ab9ea55b3c221ba65f)
