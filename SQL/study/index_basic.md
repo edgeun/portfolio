@@ -81,3 +81,25 @@
 - **예제 40. 건수 출력하기 (COUNT)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#9b07dc489a9843698e21050ee8de0d5e)
 
 - **예제 41. 데이터 분석 함수로 순위 출력하기 (RANK)**:  📝[노트](https://edgeun.notion.site/0517_SQL_-MAX-RANK-c00eaacc7d9a44c6a15505b8046718da#c142d1e863ea46ab9ea55b3c221ba65f)
+
+- **예제 42. 데이터 분석 함수로 순위 출력하기 2 (DENSE_RANK)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#842a553f47954768b9ff3db9580fc1f3)
+
+- **예제 43. 데이터 분석 함수로 등급 출력하기 (NTILE)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#643aed1a90524f0ba5e4979a203aa61c)
+
+- **예제 44. 데이터 분석 함수로 순위의 비율 출력하기 (CUME_DIST)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#fa3abe87cdc0418a8599809378f95d78)
+
+- **예제 45. 데이터 분석 함수로 데이터를 가로로 출력하기 (LISTAGG)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#611b7f72e27c427e9b92689daa0235c1)
+
+- **예제 46. 데이터 분석 함수로 바로 전 행과 다음 행 출력하기 (LAG, LEAD)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#d2c8272920d84cf4a5b903fc01663e37)
+
+- **예제 47. 행의 데이터를 컬럼으로 출력하기 1 (SUM + DECODE)**:  📝[노트](https://edgeun.notion.site/0520_SQL_-2-DENSE_RANK-SUM-DECODE-bf36c52f6c66417c8c0a7ad667c38400#9c0f9ae6a4e54ac897282a9bd27d9002)
+
+- **예제 48. COLUMN을 ROW로 출력하기 2 (PIVOT)**:  📝[노트](https://edgeun.notion.site/0522_SQL_-PIVOT-UNPIVOT-431354407d204033abfb7547a22848c6#b712b9ad79bd4f6abd3fc78332b6b335)
+
+- **예제 49. ROW를 COLUMN으로 출력하기 (UNPIVOT)**:  📝[노트](https://edgeun.notion.site/0522_SQL_-PIVOT-UNPIVOT-431354407d204033abfb7547a22848c6#9bd5e166e9c34632b86306394d8f8036)
+
+- **예제 50. 데이터 분석 함수로 누적 데이터 출력하기 (SUM OVER)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#b7d3dfe639a64657a6ed1404c16534cb)
+
+- **예제 51. 데이터 분석 함수로 비율 출력하기 (RATIO_TO_REPORT)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#05bc9bee60d1474b8f1ed5a0d9292065)
+
+- **예제 52. 데이터 분석 함수로 집계 결과 출력하기 1 (ROLLUP)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#bb7d681d51c8459c909ea858c53118a6)
