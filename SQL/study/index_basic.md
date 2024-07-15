@@ -103,3 +103,15 @@
 - **예제 51. 데이터 분석 함수로 비율 출력하기 (RATIO_TO_REPORT)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#05bc9bee60d1474b8f1ed5a0d9292065)
 
 - **예제 52. 데이터 분석 함수로 집계 결과 출력하기 1 (ROLLUP)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#bb7d681d51c8459c909ea858c53118a6)
+
+- **예제 53. 데이터 분석 함수로 집계 결과 출력하기 2 (CUBE)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#0de30ad9bc4d488b912c17797b22a25d)
+
+- **예제 54. 데이터 분석 함수로 집계 결과 출력하기 3 (GROUPING SETS)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#d41b2cb0e6984154aca76a9dedd12fb7)
+
+- **예제 55. 데이터 분석 함수로 출력 결과 넘버링 하기 (ROW_NUMBER)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#592f45f710b24ada99fcf04d6408b904)
+
+- **예제 56. 출력되는 행 제한하기 1 (ROWNUM)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#90569b355448447587c738f4abd4d213)
+
+- **예제 57. 출력되는 행 제한하기 2 (SIMPLE TOP-N QUERIES)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#7fda5c19449842538350cdb7d961bd3d)
+
+- **예제 58. 여러 테이블의 데이터를 조인해서 출력하기 1 (EQUI JOIN)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
