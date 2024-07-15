@@ -106,7 +106,7 @@
 
 - **예제 53. 이원 교차표 분석하기**:  📝[노트](https://edgeun.notion.site/0709_R_-b2a205c85fd3472bb3a5ef28e14f3ee5#95a7e236ee3545bba44c63ebcfe4e9a6)
 
-- **예제 54. KNN 머신러닝 알고리즘**:  📝[노트](https://edgeun.notion.site/0710_R_KNN-4595bd0f6caa4a4a90d0d331ce4cbf50#056ed169c8bb45f2858211de32ec739c)
+- **예제 54. KNN 머신러닝 모델 알고리즘**:  📝[노트](https://edgeun.notion.site/0710_R_KNN-4595bd0f6caa4a4a90d0d331ce4cbf50#056ed169c8bb45f2858211de32ec739c)
 
 - **예제 55. 주성분 분석**:  📝[노트](https://edgeun.notion.site/0711_R_-f310995056ef49b3a3e138eaeae53985#b481fffd701541d3bed50aa5c3651d51)
 
@@ -117,3 +117,5 @@
 - **예제 58. 나이브 베이즈 모델의 성능을 높이는 하이퍼 파라미터 (라플라스 수치값)**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#339886ad333444ca998792dd589dc31a)
 
 - **예제 59. 규칙 기반 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
+
+- **예제 60. 의사결정트리 모델 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
