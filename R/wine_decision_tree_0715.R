@@ -15,7 +15,7 @@ colSums(is.na(wine))
 library(caret)
 set.seed(1)
 
-train_num <- createDataPartition(wine$Type, p = 0.9, list = F) # 훈련데이터 90%, 테스트데이터 10%로 나눔
+train_num <- createDataPartition(wine$Type, p = 0.9, list = F) # 훈련 데이터 90%, 테스트 데이터 10%로 나눔
 
 train_data <- wine[train_num, ]
 test_data  <- wine[-train_num, ]
