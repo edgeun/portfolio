@@ -10,7 +10,7 @@ str(wine)
 prop.table(table(wine$Type))
 colSums(is.na(wine)) 
 
-# 훈련데이터와 테스트데이터 분리하기
+# 훈련 데이터와 테스트 데이터 분리하기
 # install.packages("caret")
 library(caret)
 set.seed(1)
