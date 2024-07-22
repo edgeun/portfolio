@@ -59,7 +59,7 @@ for (i in 1:10) {
   if (y > 100) break
 }
 
-# 거짓부정(FN)을 확인하기 위한 이원교차표 출력하기
+# 거짓부정(FN)을 확인하기 위한 혼동 행렬 출력하기
 # install.packages("gmodels")
 library(gmodels)
 
