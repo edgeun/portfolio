@@ -1,5 +1,4 @@
-# 데이터 불러오기
-setwd("c:\\data")
+# 데이터 불러오기 (데이터: wine2.csv)
 wine <- read.csv("wine2.csv", stringsAsFactors = T)
 head(wine)
 
