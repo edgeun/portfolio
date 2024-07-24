@@ -1,5 +1,5 @@
-# 데이터 불러오기 (데이터: wine2.csv)
-wine <- read.csv("wine2.csv", stringsAsFactors = T)
+# 데이터 불러오기
+wine <- read.csv("wine2.csv", stringsAsFactors = T) # 범주형 데이터 팩터로 변환해서 불러오기
 head(wine)
 
 # 데이터 살펴보기
@@ -14,10 +14,10 @@ colSums(is.na(wine))
 library(caret)
 set.seed(1)
 
-train_num <- createDataPartition(wine$Type, p = 0.9, list = F)
+k <- createDataPartition(wine$Type, p = 0.9, list = F)
 
-train_data <- wine[train_num, ]
-test_data  <- wine[-train_num, ]
+train_data <- wine[k, ]
+test_data <- wine[-k, ]
 
 nrow(train_data) # 161
 nrow(test_data) # 16
