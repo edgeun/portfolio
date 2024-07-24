@@ -61,7 +61,7 @@ for (i in seq(1, 29, 2)) {
 # 정확도 데이터 프레임 확인
 accuracies
 
-# plotly로 라인 그래프 시각화
+# plotly로 k값에 대한 정확도 라인 그래프 출력
 fig <- plot_ly(accuracies, x = ~k, y = ~accuracy, type = 'scatter', mode = 'lines+markers', line = list(color = 'red'))
 fig <- fig %>% layout(title = "K 값에 따른 정확도",
                       xaxis = list(title = "K 값"),
