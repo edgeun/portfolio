@@ -1,6 +1,5 @@
 # 패키지 설치
 # install.packages("svDialogs")
-# 설치 완료하면 이 명령어는 메모장에 넣지 말 것
 
 # 패키지 불러오기
 library(svDialogs)
