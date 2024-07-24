@@ -1,6 +1,6 @@
 # 데이터 불러오기
-setwd("c:\\data") # 경로 설정
-wine <- read.csv("wine2.csv", stringsAsFactors = T) # 범주 데이터를 팩터화해서 불러오기
+setwd("c:\\data")
+wine <- read.csv("wine2.csv", stringsAsFactors = T)
 head(wine)
 
 # 데이터 살펴보기
@@ -10,12 +10,12 @@ str(wine)
 prop.table(table(wine$Type))
 colSums(is.na(wine)) 
 
-# 훈련 데이터와 테스트 데이터 분리하기
+# 훈련데이터와 테스트데이터 분리하기
 # install.packages("caret")
 library(caret)
 set.seed(1)
 
-train_num <- createDataPartition(wine$Type, p = 0.9, list = F) # 훈련 데이터 90%, 테스트 데이터 10%로 나눔
+train_num <- createDataPartition(wine$Type, p = 0.9, list = F)
 
 train_data <- wine[train_num, ]
 test_data  <- wine[-train_num, ]
@@ -30,7 +30,7 @@ head(train_data)
 # install.packages("C50")
 library(C50)
 
-wine_model <- C5.0(train_data[ , -1], train_data[ , 1]) # 종속변수 1번째 컬럼
+wine_model <- C5.0(train_data[ , -1], train_data[ , 1])
 summary(wine_model)
 
 # 모델 예측
@@ -53,13 +53,13 @@ for (i in 1:10) {
   test_result2 <- predict(wine_model2, test_data[, -1])
   a <- sum(test_result2 == test_data[, 1]) / 16 * 100
   y <- y + jumpby
-  print(paste(i, '일때', a)) # trial이 1부터 10까지 일 때의 정확도 a를 연결연산자로 출력
+  print(paste(i, '일때', a))
   
   # 선택적: y가 100을 넘으면 루프 종료
   if (y > 100) break
 }
 
-# 거짓부정(FN)을 확인하기 위한 혼동 행렬 출력하기
+# 거짓부정(FN)을 확인하기 위한 이원교차표 출력하기
 # install.packages("gmodels")
 library(gmodels)
 
@@ -67,4 +67,6 @@ wine_model2 <- C5.0(train_data[ , -1], train_data[ , 1], trials = 3) # 적절한
 test_result2 <- predict(wine_model2, test_data[ , -1])
 
 x <- CrossTable(test_data[ , 1], test_result2)
+
 x$t
+
