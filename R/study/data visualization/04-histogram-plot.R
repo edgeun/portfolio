@@ -1,4 +1,4 @@
-# 데이터 불러오기 (data: usedcars)
+# 데이터 불러오기 (data: usedcars.csv)
 usedcars <- read.csv("c:\\data\\usedcars.csv", header=T)
 mileage <- usedcars$mileage
 
