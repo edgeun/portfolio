@@ -3,7 +3,6 @@ setwd("c:\\data") # 작업 디렉토리 설정
 # install.packages("plotly")
 library(plotly)
 
-
 #### 01. 막대 그래프
 
 # 데이터 로드 (data: emp.csv)
