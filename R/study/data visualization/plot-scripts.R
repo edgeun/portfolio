@@ -14,8 +14,7 @@ options_list <- list("01: 막대 그래프 코드",
                      "06: 박스 플롯 그래프 코드",
                      "07: 워드클라우드 그래프 코드",
                      "08: PCA 주성분 분석 코드",
-                     "09: pairs 상관관계 분석 코드",
-                     "10: 오라클 DB 연동 코드")
+                     "09: pairs 상관관계 분석 코드")
 
 # 사용자 입력 받기 (대화 상자 사용)
 dialog_result <- dlgList(options_list, title = "번호를 선택하세요")$res
@@ -68,10 +67,6 @@ if (is.null(dialog_result)) {
          "9" = {
            cat(readLines("pairscorr.R"), sep = "\n")
            source("pairscorr.R", local = TRUE)
-         },
-         "10" = {
-           cat(readLines("oracledbconnect.R"), sep = "\n")
-           source("oracledbconnect.R", local = TRUE)
          },
          {
            cat("유효하지 않은 선택입니다.\n")
