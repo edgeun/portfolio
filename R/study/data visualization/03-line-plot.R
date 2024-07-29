@@ -1,4 +1,5 @@
 # plotly 패키지 로드
+# install.packages("plotly")
 library(plotly)
 
 # 데이터 로드 (data: 2호선_강남역_시간대별_승하차현황_수정2.csv)
