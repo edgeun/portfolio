@@ -1,8 +1,5 @@
-# 작업 디렉토리 설정
-setwd("c:\\data")
-
-# 데이터 불러오기 
-usedcars <- read.csv("usedcars.csv", header=T)
+# 데이터 불러오기 (data: usedcars)
+usedcars <- read.csv("c:\\data\\usedcars.csv", header=T)
 mileage <- usedcars$mileage
 
 # 평균값, 중앙값, 최빈값 계산 함수
