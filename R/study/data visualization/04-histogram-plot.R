@@ -1,3 +1,6 @@
+# 작업 디렉토리 설정
+setwd("c:\\data")
+
 # 데이터 불러오기 
 usedcars <- read.csv("usedcars.csv", header=T)
 mileage <- usedcars$mileage
