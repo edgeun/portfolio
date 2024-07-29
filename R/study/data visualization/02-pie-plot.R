@@ -1,12 +1,9 @@
-# 작업 디렉토리 설정
-setwd("c:\\data")
-
 # plotly 패키지 로드
 # install.packages("plotly")
 library(plotly)
 
 # 데이터 로드 (data: usedcars.csv)
-cars <- read.csv("usedcars.csv", header = T)
+cars <- read.csv("c:\\data\\usedcars.csv", header = T)
 
 # 모델별 인원 수 계산
 car_counts <- table(cars$model)
