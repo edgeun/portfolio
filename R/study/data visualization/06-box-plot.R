@@ -1,3 +1,5 @@
+# plotly 패키지 로드
+# install.packages("plotly")
 library(plotly)
 
 # 데이터 정의
