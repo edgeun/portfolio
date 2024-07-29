@@ -1,8 +1,8 @@
-# plotly 패키지 로드
-library(plotly)
-
 # 작업 디렉토리 설정
 setwd("c:\\data")
+
+# plotly 패키지 로드
+library(plotly)
 
 # 데이터 로드
 car <- read.csv("usedcars.csv", header = TRUE)
