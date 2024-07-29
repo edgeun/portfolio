@@ -5,7 +5,7 @@
 library(ggplot2)
 library(plotly)
 
-# 아이리스 데이터셋 로드
+# 데이터 로드 (data: iris2.csv)
 iris_data <- read.csv("c:\\data\\iris2.csv")
 
 # 주성분 분석 수행
