@@ -1,13 +1,9 @@
-# 작업 디렉토리 설정
-setwd("c:\\data")
-
 # plotly 패키지 로드
 # install.packages("plotly")
 library(plotly)
 
 # 데이터 로드 (data: emp.csv)
-setwd("c:\\data")
-emp <- read.csv("emp.csv", header = T)
+emp <- read.csv("c:\\data\\emp.csv", header = T)
 
 # 직업별 인원 수 계산
 job_counts <- table(emp$job)
