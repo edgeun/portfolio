@@ -1,9 +1,9 @@
 # 필요한 패키지 설치 및 로드
-if (!require("readr")) install.packages("readr")
-if (!require("dplyr")) install.packages("dplyr")
-if (!require("caret")) install.packages("caret")
-if (!require("class")) install.packages("class")
-if (!require("plotly")) install.packages("plotly")
+# install.packages("readr")
+# install.packages("dplyr")
+# install.packages("caret")
+# install.packages("class")
+# install.packages("plotly")
 
 library(readr)
 library(dplyr)
@@ -11,12 +11,12 @@ library(caret)
 library(class)
 library(plotly)
 
-# 1단계: 데이터 수집
+# 데이터 불러오기
 wbcd <- read.csv("c:\\data\\wisc_bc_data.csv", stringsAsFactors = TRUE) # 범주형 데이터 팩터로 변환해서 불러오기
 nrow(wbcd) # 569
 ncol(wbcd) # 32
 
-# 2단계: 데이터 탐색
+# 데이터 살펴보기
 # 1. 결측치 확인
 colSums(is.na(wbcd))
 
@@ -30,7 +30,7 @@ normalize <- function(x) {return((x - min(x)) / (max(x) - min(x)))} # 최대 최
 wbcd_n <- as.data.frame(lapply(wbcd2, normalize)) # 독립변수를 정규화하여 추출
 summary(wbcd_n)
 
-# 3단계: 모델 훈련
+# 모델 생성 및 훈련하기
 # 훈련 데이터와 테스트 데이터를 분리합니다. 90% 학습, 10% 시험
 set.seed(1)
 k <- createDataPartition(wbcd$diagnosis, p = 0.9, list = FALSE)
@@ -47,7 +47,7 @@ wbcd_test_label <- wbcd$diagnosis[-k]
 length(wbcd_train_label)  # 513
 length(wbcd_test_label)   # 56
 
-# 4단계: 모델 성능 평가 (for loop 문을 실행해서 정확도가 높게 나오는 k값 구하기)
+# 모델 성능 평가하기 (for loop 문을 실행해서 정확도가 높게 나오는 k값 구하기)
 accuracies <- data.frame(k = integer(), accuracy = numeric())
 
 set.seed(10)
