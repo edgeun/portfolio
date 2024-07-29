@@ -1,11 +1,9 @@
-# 작업 디렉토리 설정
-setwd("c:\\data")
-
 # plotly 패키지 로드
+# install.packages("plotly")
 library(plotly)
 
-# 데이터 로드
-car <- read.csv("usedcars.csv", header = TRUE)
+# 데이터 로드 (data: usedcars.csv)
+car <- read.csv("c:\\data\\usedcars.csv", header = TRUE)
 car
 
 # 산점도 생성
