@@ -13,7 +13,6 @@ calculate_stats <- function(data) {
 # 통계량 계산
 mileage_stats <- calculate_stats(mileage)
 
-
 # 대칭분포 그래프 그리기
 hist(mileage, breaks=30, col="grey", border="white", prob=TRUE, main="대칭분포", xlab="값", ylab="밀도")
 lines(density(mileage), col="red")  # 확률 밀도 함수 그래프
