@@ -119,4 +119,4 @@
 
 - **예제 59. 규칙 기반 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
 
-- **예제 60. 의사결정트리 모델 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
+- **예제 60. 의사결정트리 모델**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
