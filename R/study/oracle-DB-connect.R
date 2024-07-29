@@ -14,8 +14,8 @@ oracle_db <- dbConnect(driver, 'jdbc:oracle:thin:@127.0.0.1:1521/xe', 'c##scott'
 # 오라클DB 사용자 유저 이름, 비밀번호 입력
 
 emp_query <- 'select e.ename, d.loc
-                       from  emp  e, dept  d
-                     where  e.deptno = d.deptno'
+                from emp  e, dept  d
+               where e.deptno = d.deptno' # SQL 쿼리문 작성해서 추출하기
 
-emp_data <- dbGetQuery( oracle_db, emp_query)
+emp_data <- dbGetQuery(oracle_db, emp_query)
 emp_data
