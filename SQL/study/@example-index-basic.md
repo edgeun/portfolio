@@ -116,3 +116,27 @@
 - **예제 57. 출력되는 행 제한하기 2 (SIMPLE TOP-N QUERIES)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#7fda5c19449842538350cdb7d961bd3d)
 
 - **예제 58. 여러 테이블의 데이터를 조인해서 출력하기 1 (EQUI JOIN)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 59. 여러 테이블의 데이터를 조인해서 출력하기 2 (NON EQUI JOIN)**:  📝[노트](https://edgeun.notion.site/0524_SQL_-2-NON-EQUI-JOIN-4-SELF-JOIN-7df3b63faaf248bfa17df7838f911237#edf9ea8184084ecea4c30ab96dfca1e2)
+
+- **예제 60.여러 테이블의 데이터를 조인해서 출력하기 3 (OUTER JOIN)**:  📝[노트](https://edgeun.notion.site/0524_SQL_-2-NON-EQUI-JOIN-4-SELF-JOIN-7df3b63faaf248bfa17df7838f911237#6047d23d7e1a460c815a6d08ae1aea5f)
+
+- **예제 61. 여러 테이블의 데이터를 조인해서 출력하기 4 (SELF JOIN)**:  📝[노트](https://edgeun.notion.site/0524_SQL_-2-NON-EQUI-JOIN-4-SELF-JOIN-7df3b63faaf248bfa17df7838f911237#d612f1bb80fc4848b59b2a57cee1e29e)
+
+- **예제 62. 여러 테이블의 데이터를 조인해서 출력하기 5 (ON)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 63. 여러 테이블의 데이터를 조인해서 출력하기 5 (USING 절)**:  📝[노트](https://edgeun.notion.site/0527_SQL_-5-ON-MINUS-d6a9813e326d46989b83f188dec4353c#cc3b90b154be4b47b066e245ca663525)
+
+- **예제 64. 여러 테이블의 데이터를 조인해서 출력하기 6 (NATURAL JOIN)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 65. 여러 테이블의 데이터를 조인해서 출력하기 7 (LEFT/RIGHT OUTER JOIN)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 66. 여러 테이블의 데이터를 조인해서 출력하기 8 (FULL OUTER JOIN)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 67. 집합 연산자로 데이터를 위아래로 연결하기 1 (UNION ALL)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 68. 집합 연산자로 데이터를 위아래로 연결하게 2 (UNION)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 69. 집합 연산자로 데이터의 교집합을 출력하기 (INTERSECT)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
+
+- **예제 70. 집합 연산자로 데이터의 차이를 출력하기 (MINUS)**:  📝[노트](https://edgeun.notion.site/0523_SQL_-RATIO_TO_REPORT-1-EQUI-JOIN-b097858e316a47e88a599f5d9685d62a#95855f29f71346f58948389ad458b85f)
