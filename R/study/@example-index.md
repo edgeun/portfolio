@@ -139,18 +139,18 @@
 
 - **예제 69. 신경망 모델**:  📝[노트](https://edgeun.notion.site/0724_R_-3281063f4b0442b695542fad8aac1e74#12ecf6064e364b5c9af700d5b4b14629)
 
-- **예제 70. 연관 규칙 (비지도 학습)**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 70. 연관 규칙 (비지도 학습)**:  📝[노트](https://edgeun.notion.site/0725_R_-277887623bbc4694938c10b2ebef4669#cb28b1d972ed4d8fa67010b25b42a05a)
 
-- **예제 71. K-Means 알고리즘 (비지도 학습) - 군집 분석**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 71. K-Means 알고리즘 (비지도 학습) - 군집 분석**:  📝[노트](https://edgeun.notion.site/0725_R_K-Means-d85e10a4a4904be9aecf1d3bf59e8979#44a1e7fbf08244fda4cc0a851a058e49)
 
-- **예제 72. 모델 평가**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 72. 모델 평가**:  📝[노트](https://edgeun.notion.site/0725_R_K-Means-d85e10a4a4904be9aecf1d3bf59e8979#f350f1c6723d48569cc5966052e00217)
 
-- **예제 73. ROC 커브와 Cut-off 값**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 73. ROC 커브와 Cut-off 값**:  📝[노트](https://edgeun.notion.site/0729_R_ROC-Cut-off-eff14b95f8524a52b8f2efdc291573d2#b112e4f0d5474be1a372541d9f384a29)
 
-- **예제 74. K-fold 교차검증**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 74. K-fold 교차검증**:  📝[노트](https://edgeun.notion.site/0729_R_ROC-Cut-off-eff14b95f8524a52b8f2efdc291573d2#1ac591857a904e85bc2effa31f400474)
 
-- **예제 75. 앙상블 모델 (배깅 / 부스팅 / 랜덤포레스트)**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 75. 앙상블 모델 (배깅 / 부스팅 / 랜덤포레스트)**:  📝[노트](https://edgeun.notion.site/0729_R_ROC-Cut-off-eff14b95f8524a52b8f2efdc291573d2#9da87533a8c64c03a511b62cccb198e1)
 
-- **예제 76. 랜덤포레스트 모델**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 76. 랜덤포레스트 모델**:  📝[노트](https://edgeun.notion.site/0730_R_-carot-fef4f5a6799a41159e7ac6430892a142#a7ac3c2ccc434756b77b811d54b67e36)
 
-- **예제 77. carot 을 이용한 자동 튜닝**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+- **예제 77. carot 을 이용한 자동 튜닝**:  📝[노트](https://edgeun.notion.site/0730_R_-carot-fef4f5a6799a41159e7ac6430892a142#21c614a1a4aa463bbce0f7c56ef7d874)
