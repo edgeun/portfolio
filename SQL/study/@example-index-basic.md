@@ -171,26 +171,84 @@
 
 - **예제 85. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트](https://edgeun.notion.site/0530_SQL_-LOCK-MERGE-b6afe51ed31b48c785732a33ed0d7884#7d45c951a7724cc59885e7b4d04e5af6)
 
-- **예제 86. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 86. 서브 쿼리를 사용하여 데이터 수정하기**: 📝[노트](https://edgeun.notion.site/0530_SQL_-LOCK-MERGE-b6afe51ed31b48c785732a33ed0d7884#3555acbdd8b64d289769c97e45158b21)
 
-- **예제 87. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 87. 서브 쿼리를 사용하여 데이터 삭제하기**: 📝[노트](https://edgeun.notion.site/0530_SQL_-LOCK-MERGE-b6afe51ed31b48c785732a33ed0d7884#deeec205d8274221aed7e291e4667b0e)
 
-- **예제 88. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 88. 서브 쿼리를 사용하여 데이터 합치기 (MERGE)**: 📝[노트](https://edgeun.notion.site/0530_SQL_-LOCK-MERGE-b6afe51ed31b48c785732a33ed0d7884#aa8c6fd9f8964a689be59e1bb498c61f)
 
-- **예제 89. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 89. 계층형 질의문으로 서열을 주고 데이터 출력하기 1**: 📝[노트](https://edgeun.notion.site/0531_SQL_-1-CREATE-TABLE-ac71fd399420417a8e3b74847e9294a8#2caaf10b1e01413b90c1e5ea94f28ac4)
 
-- **예제 90. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 90. 계층형 질의문으로 서열을 주고 데이터 출력하기 2**: 📝[노트](https://edgeun.notion.site/0531_SQL_-1-CREATE-TABLE-ac71fd399420417a8e3b74847e9294a8#89280679747c4b789e0574c4e12ba5b1)
 
-- **예제 91. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 91. 계층형 질의문으로 서열을 주고 데이터 출력하기 3**: 📝[노트](https://edgeun.notion.site/0531_SQL_-1-CREATE-TABLE-ac71fd399420417a8e3b74847e9294a8#b0d7d30640a24c4598dcdcec6d3bc848)
 
-- **예제 92. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 92. 계층형 질의문으로 서열을 주고 데이터 출력하기 4**: 📝[노트](https://edgeun.notion.site/0531_SQL_-1-CREATE-TABLE-ac71fd399420417a8e3b74847e9294a8#a2696a025b6a4ef7892fb089c383644e)
 
-- **예제 93. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 93. 일반 테이블 생성하기 (CREATE TABLE)**: 📝[노트](https://edgeun.notion.site/0531_SQL_-1-CREATE-TABLE-ac71fd399420417a8e3b74847e9294a8#cd4325bdc0df4ba3adc583adcaf08b49)
 
-- **예제 94. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 94. 임시 테이블 생성하기 (CREATE TEMPORAY TABLE)**: 📝[노트](https://edgeun.notion.site/0603_SQL_-CREATE-TEMPORAY-TABLE-SQL-VS-6d2369f6f2f14aab963270f4f40e5f8e#03dbf988ec104b8fa7837fd2a4b1a20b)
 
-- **예제 95. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 95. 복잡한 쿼리를 단순하게 하기 1 (VIEW)**: 📝[노트](https://edgeun.notion.site/0603_SQL_-CREATE-TEMPORAY-TABLE-SQL-VS-6d2369f6f2f14aab963270f4f40e5f8e#282c36d812c4423f8489e5b66ef6a624)
 
-- **예제 96. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 96. 테이블의 컬럼 추가, 삭제, 변경하기**: 📝[노트](https://edgeun.notion.site/0603_SQL_-CREATE-TEMPORAY-TABLE-SQL-VS-6d2369f6f2f14aab963270f4f40e5f8e#542644b4affe452681655434465525b5)
 
-- **예제 97. 서브 쿼리를 사용하여 데이터 입력하기**: 📝[노트]()
+- **예제 97. 데이터 검색 속도를 높이기 (INDEX)**: 📝[노트](https://edgeun.notion.site/0604_SQL_-INDEX-3-FLASHBACK-DROP-2474cee5125c4d01a737bb965d923432#43cf0afd1c8b44849d16ce2e8a293461)
+
+- **예제 98. 절대로 중복되지 않는 번호 만들기 (SEQUENCE)**: 📝[노트](https://edgeun.notion.site/0604_SQL_-INDEX-3-FLASHBACK-DROP-2474cee5125c4d01a737bb965d923432#67f530ae72fd4fe7a7bb7f46293aa885)
+
+- **예제 99. 실수로 지운 데이터 복구하기 1 (FLASHBACK QUERY)**: 📝[노트](https://edgeun.notion.site/0604_SQL_-INDEX-3-FLASHBACK-DROP-2474cee5125c4d01a737bb965d923432#92e3259340f1415d98f61c7d56e6f241)
+
+- **예제 100. 실수로 지운 데이터 복구하기 2(FLASHBACK TABLE)**: 📝[노트](https://edgeun.notion.site/0604_SQL_-INDEX-3-FLASHBACK-DROP-2474cee5125c4d01a737bb965d923432#ab5de1bcc2a64cf59e79ca233abd9fe0)
+
+- **예제 101. 실수로 지운 데이터 복구하기 3 (FLASHBACK DROP)**: 📝[노트](https://edgeun.notion.site/0604_SQL_-INDEX-3-FLASHBACK-DROP-2474cee5125c4d01a737bb965d923432#182a909e69b444298e8cf73466a9f8e3)
+
+- **예제 102. 실수로 지운 데이터 복구하기 4 (FLASHBACK VERSION QUERY)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#8cce4975f6d347f98d5d634643861f33)
+
+- **예제 103. 실수로 지운 데이터 복구하기 5 (FLASHBACK TRANSACTION QUERY)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#da5ada849f6344588891dbb1e634f626)
+
+- **예제 104. 데이터의 품질 높이기 1 (PRIMARY KEY)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#89d67d8d4f4f4a08a1adc0a602cdfad1)
+
+- **예제 105. 데이터의 품질 높이기 2 (UNIQUE)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#600002c528014750b23011193f19e80e)
+
+- **예제 106. 데이터의 품질 높이기 3 (NOT NULL)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#c50db44916c34abd946043637e61e9c4)
+
+- **예제 107. 데이터의 품질 높이기 4 (CHECK)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#ff44f703cd8946feafedc2025a83b8cc)
+
+- **예제 108. 데이터의 품질 높이기 5 (FOREIGN KEY)**: 📝[노트](https://edgeun.notion.site/0605_SQL_-SQL-1f16558af3834a608f745c6247a5b57e#b4b9c1433f8d4103b6aa051f362b08f0)
+
+- **예제 109. WITH절 사용하기 1 (WITH ~ AS)**: 📝[노트](https://edgeun.notion.site/0610_SQL_WITH-1-WITH-AS-eafb6714fd2440d3b5efd138ea9c4152#3e0cc381eb50433784a287ecec882571)
+
+- **예제 110. WITH절 사용하기 2 (SUBQUERY FACTORING)**: 📝[노트](https://edgeun.notion.site/0610_SQL_WITH-1-WITH-AS-eafb6714fd2440d3b5efd138ea9c4152#081f156b1e97432ab3915b08559007ef)
+
+- **예제 111. 유저 생성하기**: 📝[노트](https://edgeun.notion.site/0610_SQL_WITH-1-WITH-AS-eafb6714fd2440d3b5efd138ea9c4152#b158580de1bf4746ae3f49a6ba890352)
+
+- **예제 112. 권한을 부여하는 명령어**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#3c8a8e0cd3354ac5872d7a267a3cf074)
+
+- **예제 113. 권한 관리를 쉽게 하기 위한 방법 (ROLE)**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#f0630241e7c14abd89f6ddbf8438edaa)
+
+- **예제 114. 컬럼 감추기 기능 구현하기**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#989db4e038374a5e9fe25758fa707e2c)
+
+- **예제 115. on delete set null 과 on delete cascade 옵션 사용법**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#1c4e83b303af45bb8871b21b95e7d2f9)
+
+- **예제 116. 제약 기능 중지 시키기**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#89dc3e35aad74d259ef3cfb46d25265a)
+
+- **예제 117. 함수 기반 인덱스 생성**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#b72d263857a249b6be0b3485d94d8211)
+
+- **예제 118. SQL로 신경망 예측 모델 구현하기**: 📝[노트](https://edgeun.notion.site/0611_SQL_-SQL-cf7add2ea973470a84028ed071ae2044#450ce3642b974cd08ed21941485a5af8)
+
+- **예제 119. 데이터 딕셔너리**: 📝[노트](https://edgeun.notion.site/0612_SQL_-INSERT-4-b56823d7d62740769a4f2545720d9a1f#f9441b4e70464d2e860b2b20b5666afd)
+
+- **예제 120. 치환변수(&) 사용하기**: 📝[노트](https://edgeun.notion.site/0612_SQL_-INSERT-4-b56823d7d62740769a4f2545720d9a1f#1d18f9b7b6bd411d8f90ec6f7b65b803)
+
+- **예제 121. SQL로 머신러닝 구현하기 - 나이브 베이즈**: 📝[노트](https://edgeun.notion.site/0612_SQL_-INSERT-4-b56823d7d62740769a4f2545720d9a1f#dfaaa5a816b3448081258087b63b4a60)
+
+- **예제 122. 독버섯과 식용버섯을 분류하는 나이브 베이즈 모델 만들기**: 📝[노트](https://edgeun.notion.site/0612_SQL_-INSERT-4-b56823d7d62740769a4f2545720d9a1f#4bff037547784786bbdf56a733b40949)
+
+- **예제 123. 다중 테이블 INSERT 문의 유형 4가지**: 📝[노트](https://edgeun.notion.site/0612_SQL_-INSERT-4-b56823d7d62740769a4f2545720d9a1f#74ea98ebc1ea4ad4adb1d2e2f5e70cf3)
+
+- **예제 124. 정규 표현식 오라클 함수 5가지**: 📝[노트](https://edgeun.notion.site/0613_SQL_-5-d79ed0d1ed244b4eb862f1333a0682e1#869e326c161c415f97e4df72f6066e73)
+
+- **예제 125. 캐글 데이터 분석 순위 상위권에 도전하기 1 (랜덤 포레스트 모델)**: 📝[노트](https://edgeun.notion.site/0613_SQL_-5-d79ed0d1ed244b4eb862f1333a0682e1#bc0a862d4ba041b29488b8cd35777723)
+
+- **예제 126. 캐글 데이터 분석 순위 상위권에 도전하기 2**: 📝[노트](https://edgeun.notion.site/0613_SQL_-5-d79ed0d1ed244b4eb862f1333a0682e1#fd3dcab77b084d4e9620b98fe64860ae)
