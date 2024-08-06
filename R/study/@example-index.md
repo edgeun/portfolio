@@ -120,3 +120,37 @@
 - **예제 59. 규칙 기반 알고리즘**:  📝[노트](https://edgeun.notion.site/0712_R_-dde98417db9d400eacbf117ddea11f26#3c66faeb931c45eb9b1303d7185ec73e)
 
 - **예제 60. 의사결정트리 모델**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 61. 단순회귀 분석**:  📝[노트](https://edgeun.notion.site/0716_R_-1e40400ea14b478086e8658088ab7b01#02c9ac96afd6457f84fb07201dc44856)
+
+- **예제 62. 상관관계 분석**:  📝[노트](https://edgeun.notion.site/0716_R_-1e40400ea14b478086e8658088ab7b01#ffeaf3e41ac741bd8659938d500c0825)
+
+- **예제 63. 다중회귀 분석**:  📝[노트](https://edgeun.notion.site/0717_R_-bae2921f102349ce8bfb6935a20d7cbf#64ed40ad2ebb49e09c50a1a6b97fe7f8)
+
+- **예제 64. 다중공선성 문제 확인**:  📝[노트](https://edgeun.notion.site/0718_R_-537654cc06e84f2399074eac00425ce6#be5f64475ed54deb977dffe23fd8fbb8)
+
+- **예제 65. 훈련과 테스트를 분리해서 다중회귀 모델 만들기**:  📝[노트](https://edgeun.notion.site/0718_R_-537654cc06e84f2399074eac00425ce6#1e976500850749ea8374b670204756e1)
+
+- **예제 66. 회귀트리 모델과 모델트리 모델**:  📝[노트](https://edgeun.notion.site/0718_R_-537654cc06e84f2399074eac00425ce6#bc2810b2761d49719130c1f14f5e40a9)
+
+- **예제 67. 로지스틱 회귀 모델**:  📝[노트](https://edgeun.notion.site/0722_R_-0aa85a42b2b74476b7083517d7792783#48f0afd0b0b64d338993846cd1bb8cc4)
+
+- **예제 68. 서포트 벡터 머신 모델**:  📝[노트](https://edgeun.notion.site/0723_R_-bea0bdece8fe4a7c827444dfc31b2ba5#3d97bbb932d149468a3421971ae64b65)
+
+- **예제 69. 신경망 모델**:  📝[노트](https://edgeun.notion.site/0724_R_-3281063f4b0442b695542fad8aac1e74#12ecf6064e364b5c9af700d5b4b14629)
+
+- **예제 70. 연관 규칙 (비지도 학습)**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 71. K-Means 알고리즘 (비지도 학습) - 군집 분석**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 72. 모델 평가**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 73. ROC 커브와 Cut-off 값**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 74. K-fold 교차검증**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 75. 앙상블 모델 (배깅 / 부스팅 / 랜덤포레스트)**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 76. 랜덤포레스트 모델**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
+
+- **예제 77. carot 을 이용한 자동 튜닝**:  📝[노트](https://edgeun.notion.site/0715_R_-3e09f5e2e9b846389e92fbad42f523bf#0332a755b2114c648f44e9e8b63268f5)
