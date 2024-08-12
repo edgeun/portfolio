@@ -92,3 +92,32 @@
 
 - **예제 46. 파이썬 모듈 이해하기**: 📝[노트](https://edgeun.notion.site/0806_Python_lambda-88c2916e22dc4c69aee846ecf8ccb5ce#931e6d2352024dd18bdec923f323d05d)
 
+- **예제 47. 패키지 이해하기**: 📝[노트](https://edgeun.notion.site/0807_Python_-0b1552510f8f4717ae6af3cae79708d0#42426062e77940e5b1793a4d50be5abc)
+
+- **예제 48. 모듈 임포트 이해하기**: 📝[노트](https://edgeun.notion.site/0807_Python_-0b1552510f8f4717ae6af3cae79708d0#0fc7af98d4c544dfb1505c4d2e721728)
+
+- **예제 49. 예외처리 이해하기 1 (try ~ except)**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#b9448e44fdc34e57bcc794306ad02a23)
+
+- **예제 50. 예외처리 활용 인터페이스 생성**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#d51b453335f44111a7616af3c2f33cc9)
+
+- **예제 51. 예외처리 이해하기 2 (try ~ except ~ else)**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#ec15f2617c5a4aed85840816e4afe3a1)
+
+- **예제 52. 예외처리 이해하기 3 (try ~ except ~ finally)**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#77e71872bd8642aab61c69d7458389f9)
+
+- **예제 53. 예외처리 이해하기 4 (try ~ except Exception as e)**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#b2e8fce4ac7a4cd0a0699f6370b2e4e2)
+
+- **예제 54. 사용자 정의 예외 처리**: 📝[노트](https://edgeun.notion.site/0808_Python_-1-try-except-cb4efb12f7be4d4dbc66bbe004782433#53cf4a4b7c8a466ca9fd5b64d9b86ded)
+
+- **예제 55. 클래스 이해하기 1**: 📝[노트](https://edgeun.notion.site/0809_Python_-1-3babc43748794abdb65991ce589cc7bc#8015f5521651493a92653c9845ea485e)
+
+- **예제 56. 클래스 이해하기 2**: 📝[노트](https://edgeun.notion.site/0809_Python_-1-3babc43748794abdb65991ce589cc7bc#e831ce64639c48869c17d2c857d395cb)
+
+- **예제 57. 클래스 멤버와 인스턴스 멤버 이해하기**: 📝[노트](https://edgeun.notion.site/0809_Python_-1-3babc43748794abdb65991ce589cc7bc#7e2babac438d4e5ea40fc9bf3a622a64)
+
+- **예제 58. 클래스 상속 이해하기**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#e89e7b79cba14449bf2280c3b51d76be)
+
+- **예제 59. 클래스 메소드 이해하기**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#c60f5f84e80f470c8670da03d8b07f2d)
+
+- **예제 60. 파이썬 웹스크롤링 1 (html 기본 문법 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#818b0b9d0cff4fb6a06f171d4a708d5c)
+
+- **예제 61. 파이썬 웹 스크롤링 2 (beautiful soup 모듈 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#4646110f7c88444083bf8df4c446f519)
