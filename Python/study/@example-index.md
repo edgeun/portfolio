@@ -168,5 +168,12 @@
 
 - **예제 84. 서비스 화면 개발하기 3 (이미지 웹스크래핑 서비스 화면 개발)**: 📝[노트](https://edgeun.notion.site/0828_Python_-4-2-d8ab9fe945fb4f13a22af9fa03cc1061#6143deadaf58460e9df796768f3f34f1)
 
-- **예제 85. 판다스 기본 문법 1 (1 유형)**: 📝[노트](https://edgeun.notion.site/0829_Python_-1-1-1da2e1cdaf4046ba9dd660596baf3756#88f61b7157264a8ca531901e7a5d152f)
+- **예제 85. 판다스 기본 문법 1 (1유형)**: 📝[노트](https://edgeun.notion.site/0829_Python_-1-1-1da2e1cdaf4046ba9dd660596baf3756#88f61b7157264a8ca531901e7a5d152f)
 
+- **예제 86. 판다스 기본 문법 2 (1유형)**: 📝[노트](https://edgeun.notion.site/0903_Python_-2-1-0854ed24cd2c4c21a3262ef2771b2554#2b473135d4c64466bdfdf6b50cbea814)
+
+- **예제 87. 판다스 기본 문법 3 (1유형) - SQL 서브쿼리 판다스로 구현**: 📝[노트](https://edgeun.notion.site/0903_Python_-2-1-0854ed24cd2c4c21a3262ef2771b2554#90be0cb074f04aafa7bf51e0f4dbf372)
+
+- **예제 88. 빅분기 실기 1유형 기출문제 풀이**: 📝[노트](https://edgeun.notion.site/0904_Python_-1-1-2-932f3ef61ca84cff9652a1c856e05394#f9f2c8710d794b71b135fb9a45fa7da4)
+
+- **예제 89. 머신러닝 1 (2유형)**: 📝[노트](https://edgeun.notion.site/0904_Python_-1-1-2-932f3ef61ca84cff9652a1c856e05394#ef7dc7fcdecc4615aa62887c18be962b)
