@@ -118,41 +118,41 @@
 
 - **예제 59. 클래스 메소드 이해하기**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#c60f5f84e80f470c8670da03d8b07f2d)
 
-- **예제 60. 웹 스크래핑 1 (html 기본 문법 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#818b0b9d0cff4fb6a06f171d4a708d5c)
+- **예제 60. 웹 크롤링 1 (html 기본 문법 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#818b0b9d0cff4fb6a06f171d4a708d5c)
 
-- **예제 61. 웹 스크래핑 2 (beautiful soup 모듈 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#4646110f7c88444083bf8df4c446f519)
+- **예제 61. 웹 크롤링 2 (beautiful soup 모듈 배우기)**: 📝[노트](https://edgeun.notion.site/0812_Python_-2-beautiful-soup-758aa1def2644248b5cee4d7fd565140#4646110f7c88444083bf8df4c446f519)
 
-- **예제 62. 웹 스크래핑 3 (EBS 레이디 버그 시청자 게시판 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0813_Python_-3-4-b6c46ddef46743ee8cf093d43db078b3#6e61b06162064c31819ecc5a4417a7ed)
+- **예제 62. 웹 크롤링 3 (EBS 레이디 버그 시청자 게시판 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0813_Python_-3-4-b6c46ddef46743ee8cf093d43db078b3#6e61b06162064c31819ecc5a4417a7ed)
 
-- **예제 63. 웹 스크래핑 4 (한국일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0813_Python_-3-4-b6c46ddef46743ee8cf093d43db078b3#db97ffe16a694f55a0ff8cfb585bb7e2)
+- **예제 63. 웹 크롤링 4 (한국일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0813_Python_-3-4-b6c46ddef46743ee8cf093d43db078b3#db97ffe16a694f55a0ff8cfb585bb7e2)
 
-- **예제 64. 웹 스크래핑 5 (동아일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#91c862322e2847e7bb48bbce20035154)
+- **예제 64. 웹 크롤링 5 (동아일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#91c862322e2847e7bb48bbce20035154)
 
-- **예제 65. 웹 스크래핑 6 (중앙일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#6271e7531d1945dd9c0df0f9de609379)
+- **예제 65. 웹 크롤링 6 (중앙일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#6271e7531d1945dd9c0df0f9de609379)
 
-- **예제 66. 웹 스크래핑 7 (한겨례 신문 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#b4b7fc79c3be4c78bfb6135d3a0b7c9a)
+- **예제 66. 웹 크롤링 7 (한겨례 신문 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0814_Python_-5-7-e71ac7d813fe41c3bd3d11c2a0df5d4b#b4b7fc79c3be4c78bfb6135d3a0b7c9a)
 
-- **예제 67. 웹 스크래핑 8 (국민일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#75727947b89841a39c04b5f03b012c18)
+- **예제 67. 웹 크롤링 8 (국민일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#75727947b89841a39c04b5f03b012c18)
 
-- **예제 68. 웹 스크래핑 9 (조선일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#d50dbfab07c642f88b185315105bc4a1)
+- **예제 68. 웹 크롤링 9 (조선일보 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#d50dbfab07c642f88b185315105bc4a1)
 
-- **예제 69. 웹 스크래핑 10 (네이버 블로그 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#d50dbfab07c642f88b185315105bc4a1)
+- **예제 69. 웹 크롤링 10 (네이버 블로그 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0819_Python_-8-9-a9290884d23c4bbd91ccfeddbf7c4365#d50dbfab07c642f88b185315105bc4a1)
 
 - **예제 70. 데이터 시각화 (워드클라우드)**: 📝[노트](https://edgeun.notion.site/0820_Python_-10-11-975f69cd23d04bf98ff23715aa42d8ed#86652d30525b46aea088c48d7132dcb9)
 
-- **예제 71. 웹 스크래핑 11 (네이버 쇼핑 데이터 수집 / csv 파일로 저장 후 판다스 모듈로 출력하기)**: 📝[노트](https://edgeun.notion.site/0820_Python_-10-11-975f69cd23d04bf98ff23715aa42d8ed#9e90db5efc634610af68ee82162c4f5d)
+- **예제 71. 웹 크롤링 11 (네이버 쇼핑 데이터 수집 / csv 파일로 저장 후 판다스 모듈로 출력하기)**: 📝[노트](https://edgeun.notion.site/0820_Python_-10-11-975f69cd23d04bf98ff23715aa42d8ed#9e90db5efc634610af68ee82162c4f5d)
 
-- **예제 72. 웹 스크래핑 12 (쿠팡 데이터 수집) / 판다스로 SQL 쿼리문 출력하기**: 📝[노트](https://edgeun.notion.site/0821_Python_-12-SQL-ed1e9e20e50d48779d03301fa3d9c3cd#7d216a2c743f422f993365f5fe68dbe8)
+- **예제 72. 웹 크롤링 12 (쿠팡 데이터 수집) / 판다스로 SQL 쿼리문 출력하기**: 📝[노트](https://edgeun.notion.site/0821_Python_-12-SQL-ed1e9e20e50d48779d03301fa3d9c3cd#7d216a2c743f422f993365f5fe68dbe8)
 
-- **예제 73. 웹 스크래핑 13 (유튜브 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#5cd906557ff84b068b0149435115e6f5)
+- **예제 73. 웹 크롤링 13 (유튜브 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#5cd906557ff84b068b0149435115e6f5)
 
-- **예제 74. 웹 스크래핑 14 (구글 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#535fe0076a3645e4aafd306b6b49fdb0)
+- **예제 74. 웹 크롤링 14 (구글 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#535fe0076a3645e4aafd306b6b49fdb0)
 
-- **예제 75. 웹 스크래핑 15 (네이버 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#7a1ceea00d0a4816ab881becf16b3184)
+- **예제 75. 웹 크롤링 15 (네이버 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0823_Python_-13-15-32bbd9c5f519487ea39d39adea383d55#7a1ceea00d0a4816ab881becf16b3184)
 
-- **예제 76. 웹 스크래핑 16 (빙 이미지 데이터 수집 / 다음 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0826_Python_-16-17-4ed0801b924d4c15be5a12c8e4638bf7#a1f4c25fa99d4a81ac0d315c3729d200)
+- **예제 76. 웹 크롤링 16 (빙 이미지 데이터 수집 / 다음 이미지 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0826_Python_-16-17-4ed0801b924d4c15be5a12c8e4638bf7#a1f4c25fa99d4a81ac0d315c3729d200)
 
-- **예제 77. 웹 스크래핑 17 (유튜브 댓글 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0826_Python_-16-17-4ed0801b924d4c15be5a12c8e4638bf7#0a92b8bb0c434794a13242f20329e226)
+- **예제 77. 웹 크롤링 17 (유튜브 댓글 데이터 수집)**: 📝[노트](https://edgeun.notion.site/0826_Python_-16-17-4ed0801b924d4c15be5a12c8e4638bf7#0a92b8bb0c434794a13242f20329e226)
 
 - **예제 78. 데이터 시각화 1 (언급량 분석) / 뉴스 기사 키워드 언급량 그래프 그리기**: 📝[노트](https://edgeun.notion.site/0827_Python_-1-3-70d5888f89ab47a681607c9b8f695f6e#6db2c30835454e369c386981b3196e83)
 
