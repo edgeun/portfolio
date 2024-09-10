@@ -178,22 +178,30 @@
 
 - **예제 89 ~ 93. 머신러닝_KNN 모델 생성하기**: 📝[노트](https://edgeun.notion.site/0904_Python_-1-_KNN-932f3ef61ca84cff9652a1c856e05394#38a782fadd1f418c9f58b18bca4118ab)
 
-- **예제 89 ~ 93. 나이브 베이즈 분류 모델 만들기**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#80243225cbb649079c3cdb323a255cfd)
+- **예제 89 ~ 93. 머신러닝_나이브 베이즈 분류 모델 만들기**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#80243225cbb649079c3cdb323a255cfd)
 
-- **예제 89 ~ 93. 의사결정트리와 랜덤포레스트 구현하기**: 📝[노트](https://edgeun.notion.site/0904_Python_-1-_KNN-932f3ef61ca84cff9652a1c856e05394#38a782fadd1f418c9f58b18bca4118ab)
+- **예제 89 ~ 93. 머신러닝_의사결정트리와 랜덤포레스트 구현하기**: 📝[노트](https://edgeun.notion.site/0904_Python_-1-_KNN-932f3ef61ca84cff9652a1c856e05394#38a782fadd1f418c9f58b18bca4118ab)
 
-- **예제 89 ~ 93. 신경망 모델 구현하기 (분류 모델)**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#13642f60e52d4bee82705b4edd667623)
+- **예제 89 ~ 93. 머신러닝_신경망 모델 구현하기 (분류 모델)**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#13642f60e52d4bee82705b4edd667623)
 
-- **예제 89 ~ 93. 로지스틱 회귀와 서포트 백터 머신을 이용한 분류**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#6616c7ac3dea4308983d2ba8720ff025)
+- **예제 89 ~ 93. 머신러닝_로지스틱 회귀와 서포트 백터 머신을 이용한 분류**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#6616c7ac3dea4308983d2ba8720ff025)
 
-- **예제 89 ~ 93. 다중 회귀 분석 모델 생성하기**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#22a5f76fa6154e37b145c4aa739d0c4f)
+- **예제 89 ~ 93. 머신러닝_다중 회귀 분석 모델 생성하기**: 📝[노트](https://edgeun.notion.site/0905_Python_-_-d4fdd79feb0c435cbdfe72cee94a29ae#22a5f76fa6154e37b145c4aa739d0c4f)
 
-- **예제 89 ~ 93. 단순회귀 분석하기**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#15d0f8f399394a94a5b08238323f190d)
+- **예제 89 ~ 93. 머신러닝_단순회귀 분석하기**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#15d0f8f399394a94a5b08238323f190d)
 
-- **예제 89 ~ 93. 파이썬으로 다중 공선성 실습하기**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#9a0a41d5d7314e1b87549535f6acaf35)
+- **예제 89 ~ 93. 머신러닝_파이썬으로 다중 공선성 실습하기**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#9a0a41d5d7314e1b87549535f6acaf35)
 
-- **예제 89 ~ 93. 신경망 모델 구현하기 (수치 예측)**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#667b09b82fc24363b49784ef5628266a)
+- **예제 89 ~ 93. 머신러닝_신경망 모델 구현하기 (수치 예측)**: 📝[노트](https://edgeun.notion.site/0906_Python_-_-a642c12edb504186807336d578fd6992#667b09b82fc24363b49784ef5628266a)
 
-- **예제 89 ~ 93. 랜덤 포레스트 모델 생성해서 수치 예측하기**: 📝[노트](https://edgeun.notion.site/0909_Python_-_-e51a753868784a22889448c34fa65864#4dc28c8904614db4b38adcbd874ead7a)
+- **예제 89 ~ 93. 머신러닝_랜덤 포레스트 모델 생성해서 수치 예측하기**: 📝[노트](https://edgeun.notion.site/0909_Python_-_-e51a753868784a22889448c34fa65864#4dc28c8904614db4b38adcbd874ead7a)
 
-- **예제 94 ~ 97. 가설검정**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#5cc29e21f47948d781e806a004ef9d67)
+- **예제 94 ~ 97. 가설검정_Z 검정 통계량**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#6053e8b55fde4a718c7e2ae6e2cbded9)
+
+- **예제 94 ~ 97. 가설검정_T 검정 통계량**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#38b658b5c4f744e09e7fbacd27cc45fc)
+
+- **예제 94 ~ 97. 가설검정_ANOVA 분석**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#244b0dd8b9c44350b617ccc29b70335a)
+
+- **예제 94 ~ 97. 가설검정_비모수 가설 검정 (윌콕슨 비모수 검정)**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#a2a9ce180c6247538c564ce167406b53)
+
+- **예제 94 ~ 97. 가설검정_비모수 가설 검정 (맨-위트니 U 비모수 검정)**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#532e3428849c4e8eaf965f2f843abac0)
