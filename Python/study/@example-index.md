@@ -205,3 +205,5 @@
 - **예제 94 ~ 97. 가설검정_비모수 가설 검정 (윌콕슨 비모수 검정)**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#a2a9ce180c6247538c564ce167406b53)
 
 - **예제 94 ~ 97. 가설검정_비모수 가설 검정 (맨-위트니 U 비모수 검정)**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#532e3428849c4e8eaf965f2f843abac0)
+
+- **예제 94 ~ 97. 가설검정_AB 테스트**: 📝[노트](https://edgeun.notion.site/0910_Python_-8d1d43a952284e6a9a6de7db3bca02ef#6cac3ab693ec40bbb14097d97cf7c3f1)
