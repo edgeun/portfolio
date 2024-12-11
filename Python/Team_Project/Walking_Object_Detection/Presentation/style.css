@@ -1,0 +1,78 @@
+/* Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 100vh; /* 화면 높이에 맞춤 */
+  position: relative;
+  overflow: hidden;
+}
+
+header video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 가로, 세로 비율 맞춤 */
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.pdf-page {
+  position: relative;
+  margin: 20px 0;
+  background: white;
+  text-align: center;
+}
+
+.pdf-page img {
+  width: 100%;
+  height: auto;
+}
+
+.video-container-1 {
+  position: absolute;
+  top: calc(50% - 260px); /* 빨간 박스 기준 위치 */
+  left: calc(50% - 80px); /* 빨간 박스 기준 위치 */
+  width: 890 * 0.3px; /* Page 8 */
+  height: 500 * 0.3px;
+}
+
+.video-container-2 {
+  position: absolute;
+  top: calc(50% - 280px); /* 빨간 박스 기준 위치 */
+  right: calc(50% - 4px); /* 빨간 박스 기준 위치 */
+  width: 680px; /* Page 9 */
+  height: 500px;
+}
+
+.video-container-3 {
+  position: absolute;
+  top: calc(50% - 190px); /* 빨간 박스 기준 위치 */
+  left: calc(50% + 110px); /* 빨간 박스 기준 위치 */
+  width: 400px;
+  height: 300px;
+}
+
+.video-container-4 {
+  position: absolute;
+  top: calc(60% - 375px); /* 중앙보다 약간 하단으로 이동 */
+  left: calc(50% - 500px); /* 화면 중앙 정렬 */
+  width: 1000px;
+  height: 710px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none; /* 그림자 제거 */
+}
