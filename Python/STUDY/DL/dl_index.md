@@ -85,4 +85,24 @@
 
 - **5.13. 소프트맥스 함수 with 오차 함수 계층 만들기**: 📝[노트](https://edgeun.notion.site/1011_-_-with-11ca6bc551d88053bd3bd9c18b99e180#11ca6bc551d88096919ef76e2d27880b)
 
+- **5.14. 텐서플로우로 3층 신경망 전체 코드 구현**: 📝[노트](https://edgeun.notion.site/1014_-_-3-11fa6bc551d88069a1caef6c481251cd#11fa6bc551d88021b112f9b6703755b7)
+
+- **6.1. 가중치 초기값 설정의 중요성**: 📝[노트](https://edgeun.notion.site/1014_-_-3-11fa6bc551d88069a1caef6c481251cd#11fa6bc551d8800c9e91f19518acfab7)
+
+- **6.2. 배치 정규화 (p210)**: 📝[노트](https://edgeun.notion.site/1014_-_-3-11fa6bc551d88069a1caef6c481251cd#11fa6bc551d8804c9e9bcc4ce3fbaeb9)
+
+- **6.3. 경사하강법을 변경해서 정확도 올리기**: 📝[노트](https://edgeun.notion.site/1014_-_-3-11fa6bc551d88069a1caef6c481251cd#11fa6bc551d880cab41ee10199534a45)
+
+- **6.4. 드롭아웃 (dropout) (p219)**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d8804f8716e42984413e3c)
+
+- **6.5. 얼리 스탑 기능 (early stopping)**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d880bca440ce2c1af01e5b)
+
+- **6.6. 가중치 감소**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d880fd907cf9de7fdc7bb7)
+
+- **7.1. 합성곱이란 무엇인가?**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d880d7ba8ee4fd6b831250)
+
+- **7.2. CNN을 이용하지 않았을 때의 기존층의 문제점**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d8809bb546cd00da116bf7)
+
+- **7.3 합성곱 연산을 컴퓨터로 구현하는 방법**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d88000b871cc05458403fc)
+
 
