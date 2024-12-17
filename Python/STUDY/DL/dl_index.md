@@ -105,4 +105,20 @@
 
 - **7.3 합성곱 연산을 컴퓨터로 구현하는 방법**: 📝[노트](https://edgeun.notion.site/1015_-_-dropout-p219-11fa6bc551d880d6aa5ac325c2ef98fb#120a6bc551d88000b871cc05458403fc)
 
+- **7.4. 패딩(padding) (p232)**: 📝[노트](https://edgeun.notion.site/1016_-_-padding-p232-CNN-121a6bc551d8808d8c39ce15d5fdb5d3#121a6bc551d88018a9f4de5b5ebe714f)
+
+- **7.5. 3차원 합성곱 (p235)**: 📝[노트](https://edgeun.notion.site/1016_-_-padding-p232-CNN-121a6bc551d8808d8c39ce15d5fdb5d3#121a6bc551d880e7882eeb1e5586e661)
+
+- **7.6. 풀링(pooling) 계층 구현하기**: 📝[노트](https://edgeun.notion.site/1016_-_-padding-p232-CNN-121a6bc551d8808d8c39ce15d5fdb5d3#121a6bc551d880c79485f9faa0c0fb8e)
+
+- **7.7. RGB 채널일 때의 maxpooling (p248)**: 📝[노트](https://edgeun.notion.site/1016_-_-padding-p232-CNN-121a6bc551d8808d8c39ce15d5fdb5d3#121a6bc551d880fa82bee3ae597c54de)
+
+- **7.8. CNN 층 구현하기**: 📝[노트](https://edgeun.notion.site/1016_-_-padding-p232-CNN-121a6bc551d8808d8c39ce15d5fdb5d3#121a6bc551d880af9894f873b6ecabc7)
+
+- **8.2. 딥러닝의 역사 : 고전 CNN부터 VGG 신경망까지 소개**: 📝[노트](https://edgeun.notion.site/1022_-_-127a6bc551d880a7b7ffec5dd9c49fb0#129a6bc551d880f790acc845fc6b9f30)
+
+- **8.3. VGG 신경망으로 인물 이미지 인식 신경망 구현**: 📝[노트](https://edgeun.notion.site/1023_-_VGG-128a6bc551d880f0b738e4a86fd7ad5a#128a6bc551d880b08580dc4fc9a26863)
+
+- **8.4. 사진 속에 사물 검출 신경망 만들기 (p279)**: 📝[노트](https://edgeun.notion.site/1024_-_-129a6bc551d8802f9240c756a5eb9d27#129a6bc551d880ae8c52ed5994f05dfb)
+
 
