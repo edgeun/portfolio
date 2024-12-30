@@ -1,3 +1,6 @@
+## 수집 데이터 출처: AI-Hub 인도보행 영상(이미지 시퀀스) 데이터
+## https://aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=189
+
 ### Class만 추출하기
 
 import xml.etree.ElementTree as ET
