@@ -118,3 +118,80 @@ rm(list=ls())  # 모든 객체 삭제 !! 사용시 주의 !!
 pt_data <- read.csv("pt_data.csv", header = T)  # csv파일에서 헤더도 함께 가져오기
 
 pt_data <- read.csv("pt_data.csv", stringsAsFactors = T)  # 범주형 데이터 팩터로 변환해서 가져오기
+
+# 데이터 탐색
+usedcars <- read.csv("/Users/dgriii0606/ml-r-4/Chapter 02/usedcars.csv", stringsAsFactors = F)
+str(usedcars)
+
+usedcars$year
+
+# 수치 변수 탐색
+summary(usedcars$year)
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 2000    2008    2009    2009    2010    2012 
+
+mean(usedcars$price)  # price의 평균값: 12961.93
+median(usedcars$price)  # price의 중앙값(2분위수): 13591.5
+range(usedcars$price)  # 최댓값과 최솟값: 3800 21992
+diff(range(usedcars$price))  # 최댓값과 최솟값의 차이: 18192
+
+quantile(usedcars$price)  # 최소값, 1분위수, 2분위수(중앙값), 3분위수, 최댓값
+#     0%     25%     50%     75%    100% 
+# 3800.0 10995.0 13591.5 14904.5 21992.0 
+
+IQR(usedcars$price)  # 3분위수와 1분위수의 차이: 3909.5
+
+quantile(usedcars$price, seq(from=0, to=1, by=0.20))  # 0부터 1까지 20%의 간격으로(=5분위수)
+#       0%     20%     40%     60%     80%    100% 
+#   3800.0 10759.4 12993.8 13992.0 14999.0 21992.0
+
+# 수치 변수 시각화 - 박스 플롯
+boxplot(usedcars$price, main="Boxplot of Used Car Prices", ylab="price ($)", col='lightcoral')
+
+# 수치 변수 시각화 - 히스토그램
+hist(usedcars$price, main="Histogram of Used Car Prices", xlab="price ($)")
+
+# 분산과 표준편차
+var(usedcars$price)  # 9749892
+sd(usedcars$price)  # 3122.482
+
+# 범주형 데이터 탐색
+table(usedcars$model)
+#  SE SEL SES 
+#  78  23  49 
+
+model_table <- table(usedcars$model)
+prop.table(model_table)  # 비율 계산
+#        SE       SEL       SES 
+# 0.5200000 0.1533333 0.3266667 
+
+# 관계 시각화 - 산포도 그래프
+plot(x = usedcars$mileage, y = usedcars$price,
+     main = "Scatterplot of Price vs. Mileage",
+     xlab = "Used Car Odometer (mi.)",
+     ylab = "Used Car Price ($)")
+
+# 이원 교차표
+install.packages("gmodels")  # 패키지 설치
+library(gmodels)  # 패키지 로드
+
+unique(usedcars$model)  # "SEL" "SE"  "SES"
+unique(usedcars$color)  # "Yellow" "Gray"   "Silver" "White"  "Blue"   "Black"  "Green"  "Red"    "Gold"
+
+usedcars$conservative <- usedcars$color %in% c("Black", "Gray", "Silver", "White")
+table(usedcars$conservative)
+# FALSE  TRUE 
+#    51    99 
+
+CrossTable(usedcars$model, usedcars$conservative)
+
+# 피어슨 카이제곱 검정 - 범주형 데이터의 독립성 검정
+pchisq(0.154, df=2, lower.tail = FALSE)
+# 0.154: 카이제곱 검정 통계량(기여도의 합), df: 자유도, Lower.tail: 꼬리 확률
+# 0.9258899: 100%에 가까울 수록 연관이 없다. <-> 반대는 연관이 크다.(우연이 아니다, p-value가 작다.)
+
+# CrossTable() 호출시 카이제곱 검정 결과 바로 출력
+CrossTable( x=usedcars$model, y=usedcars$conservative, chisq=TRUE )
+# Pearson's Chi-squared test 
+# ------------------------------------------------------------
+# Chi^2 =  0.1539564     d.f. =  2     p =  0.92591
