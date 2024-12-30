@@ -29,17 +29,35 @@ font_size = 38
 font = ImageFont.truetype(font_path, font_size)
 
 # 클래스 이름 한국어 번역 딕셔너리
-class_translations = {  # 최종 라벨링한 클래스 이름으로 변경
-    "person": "사람",
-    "car": "자동차",
-    "bicycle": "자전거",
-    "motorbike": "오토바이",
-    "bus": "버스",
-    "truck": "트럭",
-    "traffic light": "신호등",
-    "crosswalk": "횡단보도",
-    "kickboard": "전동 킥보드",
-    "bollard": "볼라드"
+class_translations = {  
+    'traffic_light_controller': '신호 조절기', 
+    'power_controller': '전기 조절기', 
+    'wheelchair': '휠체어',
+    'truck': '트럭', 
+    'tree_trunk': '나무', 
+    'traffic_sign': '교통 표지판', 
+    'table': '테이블', 
+    'stroller': '유모차', 
+    'stop': '정지신호', 
+    'scooter': '스쿠터', 
+    'potted_plant': '화분', 
+    'pole': '막대기둥', 
+    'person': '사람', 
+    'parking_meter': '주차장 미터기', 
+    'movable_signage': '표지판', 
+    'motorcycle': '오토바이',
+    'kiosk': '키오스크', 
+    'fire_hydrant': '소화기', 
+    'dog': '강아지',
+    'chair': '의자', 
+    'cat': '고양이', 
+    'carrier': '캐리어', 
+    'car': '차', 
+    'bus': '버스', 
+    'bollard': '기둥', 
+    'bicycle': '자전거', 
+    'bench': '벤치', 
+    'barricade': '바리케이드',
 }
 
 # 한글 종성 확인 함수
