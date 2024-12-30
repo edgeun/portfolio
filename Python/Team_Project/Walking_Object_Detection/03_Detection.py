@@ -12,9 +12,9 @@ import os
 model = YOLO("/Users/dgriii0606/yolov8n_finetuned_05.pt")  # 경로 구글 드라이브로 변경
 
 # 입력 및 출력 동영상 경로 설정
-input_video_path = "/Users/dgriii0606/IMG_5806.mp4"  # 경로 구글 드라이브로 변경
-temp_video_path = "/Users/dgriii0606/IMG_5806_temp.mp4"  # 경로 구글 드라이브로 변경
-output_video_path = "/Users/dgriii0606/IMG_5806_out_with_audio.mp4"  # 경로 구글 드라이브로 변경
+input_video_path = "/Users/dgriii0606/Automatic3.mp4"  # 경로 구글 드라이브로 변경
+temp_video_path = "/Users/dgriii0606/Automatic3_temp.mp4"  # 경로 구글 드라이브로 변경
+output_video_path = "/Users/dgriii0606/Automatic3_out_with_audio.mp4"  # 경로 구글 드라이브로 변경
 
 # 세 개의 ROI 이미지 경로 설정
 roi_paths = [
@@ -44,7 +44,7 @@ class_translations = {
     'pole': '전봇대', 
     'person': '사람', 
     'parking_meter': '주차장 미터기', 
-    'movable_signage': '동적 사이니지', 
+    'movable_signage': '표지판', 
     'motorcycle': '오토바이',
     'kiosk': '키오스크', 
     'fire_hydrant': '소화기', 
