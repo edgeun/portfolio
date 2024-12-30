@@ -44,7 +44,7 @@ class_translations = {
     'pole': '막대기둥', 
     'person': '사람', 
     'parking_meter': '주차장 미터기', 
-    'movable_signage': '표지판', 
+    'movable_signage': '동적 사이니지', 
     'motorcycle': '오토바이',
     'kiosk': '키오스크', 
     'fire_hydrant': '소화기', 
