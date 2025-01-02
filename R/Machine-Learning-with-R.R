@@ -207,7 +207,10 @@ CrossTable( x=usedcars$model, y=usedcars$conservative, chisq=TRUE )
 # Chi^2 =  0.1539564     d.f. =  2     p =  0.92591
 
 
-## 머신러닝 - k-NN
+##### Chapter 3: 최근접 이웃(k-NN) 방법을 활용한 분류
+
+## 예제: 유방암 샘플 분류하기
+
 wbcd <- read.csv("/Users/dgriii0606/ml-r-4/Chapter 03/wisc_bc_data.csv")
 wbcd
 
@@ -306,3 +309,142 @@ for (k_val in k_values) {
              y = wbcd_test_pred,
              prop.chisq = FALSE)
 }
+
+
+##### Chapter 4: 나이브베이즈를 활용한 확률적 학습 분류
+
+## 예제: 스팸 메일 필터링
+
+# 데이터 불러오기
+sms_raw <- read.csv("/Users/dgriii0606/ml-r-4/Chapter 04/sms_spam.csv")
+
+str(sms_raw)
+
+sms_raw$type <- factor(sms_raw$type)
+
+str(sms_raw$type)
+table(sms_raw$type)
+# ham spam 
+# 4812  747 
+
+# tm 패키지로 코퍼스(분석을 위한 말뭉치) 구축
+library(tm)
+sms_corpus <- VCorpus(VectorSource(sms_raw$text))
+
+print(sms_corpus)
+inspect(sms_corpus[1:2])
+
+as.character(sms_corpus[[1]])
+lapply(sms_corpus[1:2], as.character)
+
+# 텍스트 마이닝 매핑 함수로 클린 버전 만들기
+sms_corpus_clean <- tm_map(sms_corpus, content_transformer(tolower))  # 대문자를 소문자로 변환해서 매핑함수로 clean에 담기
+
+# 원본 데이터와 비교
+as.character(sms_corpus[[1]])
+as.character(sms_corpus_clean[[1]])
+
+# 클린본에서 숫자, 불용어, 구두점 제거
+sms_corpus_clean <- tm_map(sms_corpus_clean, removeNumbers)
+sms_corpus_clean <- tm_map(sms_corpus_clean, removeWords, stopwords())
+sms_corpus_clean <- tm_map(sms_corpus_clean, removePunctuation)
+
+# 동일한 어근 추출
+library(SnowballC)
+wordStem(c("learn", "learned", "learning", "learns"))  # 사용예시: 모두 learn으로 변경
+
+sms_corpus_clean <- tm_map(sms_corpus_clean, stemDocument)
+
+sms_corpus_clean <- tm_map(sms_corpus_clean, stripWhitespace) # eliminate unneeded whitespace
+
+# 최종 정제한 클린본 비교
+lapply(sms_corpus[1:3], as.character)
+lapply(sms_corpus_clean[1:3], as.character)
+
+# 클린본 텍스트 문서를 토큰화하기 (DTM: 문서-용어 희소행렬 생성)
+sms_dtm <- DocumentTermMatrix(sms_corpus_clean)
+
+# 위의 과정을 거치지 않고 바로 토큰화 진행하면서 문서 데이터 정제하기
+sms_dtm2 <- DocumentTermMatrix(sms_corpus, control = list(  # 원본 데이터(sms_corpus) 불러와서 정제 후 토큰화
+  tolower = TRUE,
+  removeNumbers = TRUE,
+  stopwords = TRUE,
+  removePunctuation = TRUE,
+  stemming = TRUE
+))
+
+# 불용어 제거에 함수 적용 버전 (직전 위에와 결과가 달라지므로 함수로 제거하는 방법을 적용해 위 과정을 거친 결과와 동일하게 만들 수 있음)
+sms_dtm3 <- DocumentTermMatrix(sms_corpus, control = list(
+  tolower = TRUE,
+  removeNumbers = TRUE,
+  stopwords = function(x) { removeWords(x, stopwords()) },
+  removePunctuation = TRUE,
+  stemming = TRUE
+))
+
+# 결과 비교
+sms_dtm
+sms_dtm2
+sms_dtm3
+
+# trian, test 분리
+sms_dtm_train <- sms_dtm[1:4169, ]
+sms_dtm_test  <- sms_dtm[4170:5559, ]
+
+# 종속변수 담기
+sms_train_labels <- sms_raw[1:4169, ]$type
+sms_test_labels  <- sms_raw[4170:5559, ]$type
+
+# 종속변수 비율 확인
+prop.table(table(sms_train_labels))
+prop.table(table(sms_test_labels))
+
+# 워드 클라우드로 클린본 텍스트 데이터 시각화
+library(wordcloud)
+wordcloud(sms_corpus_clean, min.freq = 50, random.order = FALSE)
+
+# subset 함수로 훈련데이터에서 spam, ham 나누기
+spam <- subset(sms_raw, type == "spam")
+ham  <- subset(sms_raw, type == "ham")
+
+wordcloud(spam$text, max.words = 40, scale = c(3, 0.5))
+wordcloud(ham$text, max.words = 40, scale = c(3, 0.5))
+
+# 최소 5번 이상 언급되는 단어 찾기
+findFreqTerms(sms_dtm_train, 5)
+
+# 5번 이상 등장한 단어들만 담기
+sms_freq_words <- findFreqTerms(sms_dtm_train, 5)
+str(sms_freq_words)
+
+# 자주 등장한 단어 모음으로 훈련, 테스트 담기
+sms_dtm_freq_train <- sms_dtm_train[ , sms_freq_words]
+sms_dtm_freq_test <- sms_dtm_test[ , sms_freq_words]
+
+# 카운트 숫자를 팩터로 변환
+convert_counts <- function(x) {
+  x <- ifelse(x > 0, "Yes", "No")  # x가 0보다 크면 "Yes"로 변환하고 그렇지 않으면 "No"로 변환해라
+}
+
+# 위에서 생성한 함수를 apply 함수로 train, test 데이터에 적용
+sms_train <- apply(sms_dtm_freq_train, MARGIN = 2, convert_counts)  # MARGIN = 2: 열, 1은 행
+sms_test  <- apply(sms_dtm_freq_test, MARGIN = 2, convert_counts)
+
+## 모델 학습하기
+library(naivebayes)
+sms_classifier <- naive_bayes(sms_train, sms_train_labels)  # 라플라스 추정값을 안 넣었을 경우 50개 이상 경고 뜸
+
+## 모델 평가하기
+sms_test_pred <- predict(sms_classifier, sms_test)
+
+library(gmodels)
+CrossTable(sms_test_pred, sms_test_labels,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('predicted', 'actual'))
+
+## 모델 성능 개선 - 라플라스 수치 넣기
+sms_classifier2 <- naive_bayes(sms_train, sms_train_labels, laplace = 1)
+sms_test_pred2 <- predict(sms_classifier2, sms_test)
+CrossTable(sms_test_pred2, sms_test_labels,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('predicted', 'actual'))
