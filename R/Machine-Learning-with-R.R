@@ -448,3 +448,121 @@ sms_test_pred2 <- predict(sms_classifier2, sms_test)
 CrossTable(sms_test_pred2, sms_test_labels,
            prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
            dnn = c('predicted', 'actual'))
+
+
+##### Chapter 5: 의사결정트리와 규칙 기반의 분류
+#### 의사결정트리
+
+## 2개의 클래스를 갖는 데이터 분할의 정보 엔트로피 계산법
+-0.60 * log2(0.60) - 0.40 * log2(0.40)
+
+## 엔트로피 시각화
+curve(-x * log2(x) - (1 - x) * log2(1 - x),
+      col = "red", xlab = "x", ylab = "Entropy", lwd = 4)
+
+## 예제: 위험 은행 대출 식별
+credit <- read.csv("/Users/dgriii0606/ml-r-4/Chapter 05/credit.csv", stringsAsFactors = TRUE)
+str(credit)
+
+# 데이터 특성 살펴보기
+table(credit$checking_balance)
+table(credit$savings_balance)
+
+summary(credit$months_loan_duration)
+summary(credit$amount)
+
+table(credit$default)
+
+# 훈련, 테스트 분할을 위한 데이터 행 수 값 무작위 생성
+# : 해당 데이터는 무작위로 정렬되있지 않으므로 주어진 데이터 행 기준으로 분할할 경우 학습이 원할하지 않음
+# (set.seed를 사용해서 결과값 고정)
+set.seed(9829)
+train_sample <- sample(1000, 900)  # 무작위 정수 추출
+
+str(train_sample)
+
+# 훈련, 테스트 데이터 분할
+credit_train <- credit[train_sample, ]
+credit_test  <- credit[-train_sample, ]
+
+# 훈련, 테스트별 랜덤으로 데이터가 들어갈 때 종속변수의 2 클래스 분포가 올바른지 (비율이 비슷한지) 비율 확인하기
+prop.table(table(credit_train$default))
+prop.table(table(credit_test$default))
+
+# C5.0 알고리즘으로 학습하기
+install.packages("C50")
+library(C50)
+credit_model <- C5.0(default ~ ., data = credit_train)
+
+# 학습한 모델 확인
+credit_model
+summary(credit_model)
+
+# 모델 평가하기
+credit_pred <- predict(credit_model, credit_test)
+
+# 교차평가표 확인
+library(gmodels)
+CrossTable(credit_test$default, credit_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual default', 'predicted default'))
+
+# 모델 성능 개선
+credit_boost10 <- C5.0(default ~ ., data = credit_train,
+                       trials = 10)  # trials 하이퍼 파라미터 조정
+credit_boost10
+summary(credit_boost10)
+
+credit_boost_pred10 <- predict(credit_boost10, credit_test)
+CrossTable(credit_test$default, credit_boost_pred10,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual default', 'predicted default'))
+
+## # 혼동 행렬을 통해 더 많은 비용이 나가는 실수(mistake) 찾기
+
+# 비용 행렬 생성을 위한 차원 만들기
+matrix_dimensions <- list(c("no", "yes"), c("no", "yes"))
+names(matrix_dimensions) <- c("predicted", "actual")
+matrix_dimensions
+
+# 행렬 생성
+error_cost <- matrix(c(0, 1, 4, 0), nrow = 2, dimnames = matrix_dimensions)
+error_cost
+
+# 비용 행렬을 트리에 적용하기
+credit_cost <- C5.0(default ~ ., data = credit_train,
+                    costs = error_cost)
+credit_cost_pred <- predict(credit_cost, credit_test)
+
+CrossTable(credit_test$default, credit_cost_pred,
+           prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
+           dnn = c('actual default', 'predicted default'))
+
+
+## 예제: 독버섯과 식용버섯 분류
+# 데이터 불러와서 살펴보기
+mushrooms <- read.csv("/Users/dgriii0606/ml-r-4/Chapter 05/mushrooms.csv", stringsAsFactors = TRUE)
+str(mushrooms)
+
+table(mushrooms$type)
+
+# OneR로 데이터 학습하기
+library(OneR)
+mushroom_1R <- OneR(type ~ ., data = mushrooms)
+
+# 모델 평가
+mushroom_1R
+
+mushroom_1R_pred <- predict(mushroom_1R, mushrooms)
+table(actual = mushrooms$type, predicted = mushroom_1R_pred)
+
+# 모델 개선하기
+library(RWeka)
+mushroom_JRip <- JRip(type ~ ., data = mushrooms)
+mushroom_JRip
+summary(mushroom_JRip)
+
+# C5.0 알고리즘으로 학습하기
+library(C50)
+mushroom_c5rules <- C5.0(type ~ ., data = mushrooms, rules = TRUE)
+summary(mushroom_c5rules)
