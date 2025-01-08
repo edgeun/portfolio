@@ -1,4 +1,3 @@
-## 2층 신경망
 # mnist 필기체 데이터 불러오기
 from tensorflow.keras.datasets.mnist import load_data
 ( x_train, y_train ), ( x_test, y_test ) = load_data( 'mnist.npz' )
