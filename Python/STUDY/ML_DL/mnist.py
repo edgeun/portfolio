@@ -6,13 +6,13 @@ print(x_train.shape)  # (60000, 28, 28)
 
 # 차원 축소하기
 x_train = x_train.reshape((x_train.shape[0], -1))
-x_test =  x_test.reshape((x_test.shape[0], -1) )  # 차원 축소 코드
+x_test =  x_test.reshape((x_test.shape[0], -1))  # 차원 축소 코드
 print(x_train.shape)  # (60000, 784)
 
-# 설명: 필기체 사진을 신경망에 넣으려면 다음과 같이 차원을 축소해야합니다.
+# 설명: 필기체 사진을 신경망에 넣으려면 다음과 같이 차원을 축소해야함
 
-# ( 60000, 28, 28 ) --> 차원 축소 코드 --> ( 60000, 784 ) 
-# -1 이라고 쓰면 28x28 을 알아서 계산해서 784로 해주는것입니다.
+# ( 60000, 28, 28 ) -> 차원 축소 코드 -> ( 60000, 784 ) 
+# -1 이라고 쓰면 28x28 을 알아서 계산해서 784로 해주는 것임
 
 # 신경망 구성에 필요한 모듈 불러오기
 import tensorflow as tf
@@ -52,7 +52,7 @@ model.add( Dense( 10, activation='softmax') )   # 출력층
 # 모델 학습 방법 지정하기
 model.compile( optimizer=SGD(),  # 경사하강법
                loss= 'sparse_categorical_crossentropy',  # 오차함수
-               metrics=['acc'] )  # 정확도를 높이는 방법으로 학습 시키겠다.
+               metrics=['acc'] )  # 정확도를 높이는 방법으로 학습시키겠다
 
 # 학습 시키기
 model.fit( x_train, y_train, batch_size=100, epochs=200 )
