@@ -74,5 +74,9 @@ pop_seoul.head()
 
 # 인구수 순위 조사하기
 pop_seoul.sort_values(by='인구수', ascending=False).head(5)  # 송파구, 강남구, 강서구, 노원구, 관악구
-pop_seoul.sort_values(by='외국인', ascending=False).head(5)  # 구로구, 영등포구, 동대문구, 관악구, 광진구
-pop_seoul.sort_values(by='고령자', ascending=False).head(5)  # 송파구, 강서구, 노원구, 은평구, 강남구
+
+pop_seoul.sort_values(by='외국인', ascending=False).head(5)     # 구로구, 영등포구, 동대문구, 관악구, 광진구
+pop_seoul.sort_values(by='외국인비율', ascending=False).head(5)  # 중구, 종로구, 용산구, 영등포구, 금천구
+
+pop_seoul.sort_values(by='고령자', ascending=False).head(5)     # 송파구, 강서구, 노원구, 은평구, 강남구
+pop_seoul.sort_values(by='고령자비율', ascending=False).head(5)  # 강북구, 도봉구, 중랑구, 은평구, 중구
