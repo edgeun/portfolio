@@ -2,7 +2,6 @@
 
 ### #1. 서울시 구별 CCTV 현황 분석
 import pandas as pd
-import numpy as np
 
 # cctv 데이터 불러오기  # 교재본 데이터 말고 최신 데이터로 불러오기
 cctv_seoul = pd.read_csv("/Users/dgriii0606/data/01_cctv_seoul_24.csv", header=1, encoding='utf-8')
