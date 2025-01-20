@@ -12,4 +12,4 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 [PDF 바로보기](https://drive.google.com/file/d/1z32_ablLuO489azo5E76yaKwayVCcS5e/view?usp=drive_link)
 
 ---
-### 미니 프로젝트 ###
+### 🚂 미니 프로젝트 ###
