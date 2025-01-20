@@ -10,3 +10,6 @@ K-평균 군집분석을 활용한 서울시 카페 상권 분석 및 개업 사
 ### 2. 보행약자 통행 보조 시스템 개발
 YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시스템 개발 </br>
 [PDF 바로보기](https://drive.google.com/file/d/1z32_ablLuO489azo5E76yaKwayVCcS5e/view?usp=drive_link)
+
+---
+### 미니 프로젝트 ###
