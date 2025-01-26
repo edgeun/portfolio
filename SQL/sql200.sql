@@ -3,9 +3,9 @@ CREATE DATABASE my_db;
 USE my_db;
 
 
-alter session set nls_Date_format='RR/MM/DD';
-drop table emp;
-drop table dept;
+ALTER SESSION SET NLS_DATE_FORMAT='RR/MM/DD';
+DROP TABLE emp;
+DROP TABLE dept;
 
 
 CREATE TABLE DEPT
