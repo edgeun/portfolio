@@ -113,3 +113,41 @@ SELECT @global.date_format;
 SET @session.date_format = '%Y-%m-%d %H:%i:%s';  -- mySQL -- y(소문자): 두자리 연도, Y(대문자): 네자리 연도
 
 SELECT @session.date_format;  -- %Y-%m-%d %H:%i:%s
+
+-- 산술 연산자
+SELECT ename, sal * 12 AS 연봉
+ FROM emp
+ WHERE sal * 12 >= 36000;
+ 
+SELECT ename, sal, comm, sal + comm
+ FROM emp
+ WHERE deptno = 10;
+ 
+-- 비교 연산자
+SELECT ename, sal, job, deptno
+ FROM emp
+ WHERE sal <= 1200;
+ 
+SELECT ename, sal
+ FROM emp
+ WHERE sal BETWEEN 1000 AND 3000;
+ 
+SELECT ename, sal
+ FROM emp
+ WHERE (sal >= 1000 AND sal <= 3000);
+ 
+SELECT ename, sal
+ FROM emp
+ WHERE ename LIKE 'S%';
+ 
+SELECT ename
+ FROM emp
+ WHERE ename LIKE '_M%';
+ 
+SELECT ename
+ FROM emp
+ WHERE ename LIKE '%T';
+ 
+SELECT ename
+ FROM emp
+ WHERE ename LIKE '%A%';
