@@ -2,10 +2,6 @@
 CREATE DATABASE my_db;
 USE my_db;
 
-alter session set nls_Date_format='RR/MM/DD';
-drop table emp;
-drop table dept;
-
 
 CREATE TABLE DEPT
        (DEPTNO number(10),
