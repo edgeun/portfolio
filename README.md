@@ -15,5 +15,5 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 
 ##  미니 프로젝트 ##
 ### 1. SQL 생성기 제작 - 미세 조정 sLLM 모델 생성 실습 📇
-📝[코드] 🤗[생성모델](https://huggingface.co/edgeun/yi-ko-6b-text2sql)
+📝[코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/Personal_Project/0123_Text2SQL_sLLM.ipynb) 🤗[생성모델](https://huggingface.co/edgeun/yi-ko-6b-text2sql)
 
