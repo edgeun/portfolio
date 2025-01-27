@@ -154,3 +154,85 @@ SELECT ename
 SELECT ename
  FROM emp
  WHERE ename LIKE '%A%';
+
+SELECT ename, comm
+ FROM emp
+ WHERE comm IS NULL;
+ 
+SELECT ename, sal, job
+ FROM emp
+ WHERE JOB IN ('SALESMAN', 'ANALYST', 'MANAGER');
+ 
+SELECT ename, sal, job
+ FROM emp
+ WHERE (job='SALESMAN' OR job='ANALYST' OR job='MANAGER');
+
+SELECT ename, sal, job
+ FROM emp
+ WHERE job NOT IN ('SALESMAN', 'ANALYST', 'MANAGER');
+ 
+SELECT ename, sal, job
+ FROM emp
+ WHERE (job !='SALESMAN' AND job !='ANALYST' AND job !='MANAGER');
+ 
+-- 논리 연산자
+SELECT ename, sal, job
+ FROM emp
+ WHERE job='SALESMAN' AND sal >= 1200;
+ 
+-- 대소문자 변환
+SELECT UPPER(ename), LOWER(ename)
+ FROM emp;
+ 
+SELECT ename, sal
+ FROM emp
+ WHERE LOWER(ename)='scott';
+ 
+-- 특정 철자 추출
+SELECT SUBSTR('SMITH', 1, 3)
+ FROM DUAL;
+ 
+-- 문자열 길이 출력
+SELECT ename, LENGTH(ename)
+ FROM emp;
+ 
+SELECT LENGTH('서울특별시')
+ FROM DUAL;
+ 
+-- 특정 철자의 위치 출력
+SELECT INSTR('SMITH', 'M')
+ FROM DUAL;
+ 
+SELECT INSTR('abcdefg@gmail.com', '@')
+ FROM DUAL;
+ 
+SELECT SUBSTR('abcdefg@gmail.com', INSTR('abcdefg@gmail.com', '@') + 1)
+ FROM DUAL;
+ 
+-- 특정 철자 다른 철자로 변경
+SELECT ename, REPLACE(sal, 0, '*')
+ FROM emp;
+ 
+SELECT ename, REGEXP_REPLACE(sal, '[0-3]', '*') AS SALARY
+ FROM emp;
+ 
+ 
+CREATE TABLE TEST_ENAME
+(ENAME	VARCHAR(10));
+ 
+INSERT INTO TEST_ENAME VALUES('김인호');
+INSERT INTO TEST_ENAME VALUES('안상수');
+INSERT INTO TEST_ENAME VALUES('최영희');
+
+COMMIT;
+
+SELECT REPLACE(ename, SUBSTR(ename, 2, 1), '*') AS '전광판_이름'
+ FROM test_ename;
+ 
+-- 특정 철자를 N개 만큼 채우기
+SELECT ename, LPAD(sal, 10, '*') AS salary1, RPAD(sal, 10, '*') AS salary2
+ FROM emp;
+ 
+SELECT ename, sal, LPAD('■', round(sal/100), '■') AS bar_chart
+ FROM emp;
+
