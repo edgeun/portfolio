@@ -16,6 +16,6 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 ##  미니 프로젝트 ##
 ### 1. SQL 생성기(Text2SQL) 제작 - Fine-tuning을 활용한 sLLM 생성 실습 📇
 데이터베이스에 대한 자연어 질의를 SQL 질의로 변경해주는 소규모 LLM 모델을 생성하고,</br>
-생성된 SQL이 데이터 요청(프롬프트)을 잘 해결했는지 GPT-4 API를 활용해 성능을 평가해보기</br>
+생성된 SQL이 데이터 요청(프롬프트)을 잘 해결했는지 GPT-4 API를 활용해 성능 평가해보기</br>
 📝[코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/Personal_Project/0123_Text2SQL_sLLM.ipynb) 🤗[생성모델](https://huggingface.co/edgeun/yi-ko-6b-text2sql)
 
