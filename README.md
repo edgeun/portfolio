@@ -14,7 +14,7 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 
 ---
 
-### LLM & Multimodal Model 파인튜닝 실습 ###
+### LLM & Multimodal Model 파인튜닝 실습
 1. Mistral 한국어 기사 요약 모델 파인 튜닝: <br>
 Mistral-7B-0.1v 모델을 한국어 기사 요약 데이터셋으로 미세 조정하여 기사 문장을 입력하면 해당 기사의 요약문을 생성하는 모델 생성하기<br>
 📝 [코드 확인하기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral-7B_LoRA_Fine_Tuning_News_summary_04.ipynb) | 🤗 [모델 확인하기](https://huggingface.co/edgeun/mistral-7b-konews-summarizer)
