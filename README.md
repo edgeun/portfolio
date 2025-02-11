@@ -1,4 +1,4 @@
-### <u>영상디자이너의</u> 우당탕탕 머신러닝 도전기 👀 ###
+### <ins>영상디자이너의</ins> 우당탕탕 머신러닝 도전기 👀 ###
 *ML/DL challenge from a (former) motion designer! Let's go for it!! 🚀*
 
 ---
