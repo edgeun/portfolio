@@ -144,7 +144,7 @@ left
 
 right
 
-pd.merge(left, right, on='key')  # 'key' 컬럼을 기준으로 두 데이터프레임에서 공통된 데이터를 합침 (sql 이퀄 조인 개념과 비슷)
+pd.merge(left, right, on='key')  # 'key' 컬럼을 기준으로 두 데이터프레임에서 공통된 데이터를 합침 (sql 이퀄 조인 개념)
 pd.merge(left, right, how='inner', on='key')
 
 pd.merge(left, right, how='left', on='key')  # left outer join
