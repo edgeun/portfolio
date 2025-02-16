@@ -150,3 +150,137 @@ pd.merge(left, right, how='inner', on='key')
 pd.merge(left, right, how='left', on='key')  # left outer join
 pd.merge(left, right, how='right', on='key')  # right outer join
 pd.merge(left, right, how='outer', on='key')  # full outer join
+
+# CCTV 데이터와 인구 데이터 합치고 분석하기
+data_result = pd.merge(cctv_seoul, pop_seoul, on='구별')
+data_result.head()
+
+del data_result['2016년 이전']  # del 열방향으로 삭제하는 명령어(컬럼 삭제)
+del data_result['2016년']
+del data_result['2017년']
+del data_result['2018년']
+data_result.head()
+
+data_result.set_index('구별', inplace=True)  # 구별 컬럼을 인덱스로 -> 이후에 그래프를 그릴 때 유리
+data_result.head()
+
+# 상관계수 확인
+np.corrcoef(data_result['고령자비율'],data_result['소계'])
+
+np.corrcoef(data_result['외국인비율'],data_result['소계'])
+
+np.corrcoef(data_result['인구수'],data_result['소계'])
+
+data_result.sort_values(by='소계', ascending=False).head(5)
+
+data_result.sort_values(by='인구수', ascending=False).head(5)
+
+# matplotlib로 그래프 그리기
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.figure()
+plt.plot([1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,0])
+plt.show()
+
+import numpy as np
+t = np.arange(0, 12, 0.01)
+y = np.sin(t)
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y)
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y)
+plt.grid()
+plt.xlabel('time')
+plt.ylabel('Amplitude')
+plt.title('Example of sinewave')
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, np.sin(t))  # y값 대신 직접 첫번째 그래프 지정
+plt.plot(t, np.cos(t))  # 두번째 그래프 지정
+plt.grid()
+plt.xlabel('time')
+plt.ylabel('Amplitude')
+plt.title('Example of sinewave')
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, np.sin(t), label='sin')  # 범례 이름 지정
+plt.plot(t, np.cos(t), label='cos')  # 범례 이름 지정
+plt.grid()
+plt.legend()
+plt.xlabel('time')
+plt.ylabel('Amplitude')
+plt.title('Example of sinewave')
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, np.sin(t), lw=3, label='sin')  # 범례 이름 지정
+plt.plot(t, np.cos(t), 'r', label='cos')  # 범례 이름 지정
+plt.grid()
+plt.legend()
+plt.xlabel('time')
+plt.ylabel('Amplitude')
+plt.title('Example of sinewave')
+plt.show()
+
+t = [0, 1, 2, 3, 4, 5, 6]
+y = [1, 4, 5, 8, 9, 5, 3]
+plt.figure(figsize=(7, 5))
+plt.plot(t, y, color='green')  # 컬러 지정
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y, color='green', linestyle='dashed')  # 라인 스타일 지정
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y, color='green', linestyle='dashed', marker='o')  # 값에 마커 추가
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y, color='green', linestyle='dashed', marker='o')  # 값에 마커 추가
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.plot(t, y, color='green', linestyle='dashed', marker='o', markerfacecolor = 'blue')
+plt.show()
+
+t = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+y = np.array([9, 8, 7, 9, 8, 3, 2, 4, 3, 4])
+
+plt.figure(figsize=(7, 5))
+plt.scatter(t, y)
+plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.scatter(t, y, marker='>')
+plt.show()
+
+colormap = t
+
+plt.figure(figsize=(7, 5))
+plt.scatter(t, y, s=50, marker='>', c=colormap)
+plt.colorbar()
+plt.show()
+
+s1 = np.random.normal(loc=0, scale=1, size=1000)
+s2 = np.random.normal(loc=5, scale=0.5, size=1000)
+s3 = np.random.normal(loc=10, scale=2, size=1000)
+
+plt.figure(figsize=(7, 5))
+plt.plot(s1, label='s1')
+plt.plot(s2, label='s2')
+plt.plot(s3, label='s3')
+plt.legend()
+plt.show()
+
+# 박스 플롯
+plt.figure(figsize=(7, 5))
+plt.boxplot((s1, s2, s3))
+plt.grid()
+plt.show()
