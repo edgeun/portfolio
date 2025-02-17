@@ -15,7 +15,7 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 ---
 
 ### LLM & Multimodal Model 파인튜닝 실습
-📝 [코드 바로보기](Python/STUDY/ML_DL)
+🤗 [모델 보기](https://huggingface.co/edgeun) | 📝 [코드 보기](Python/STUDY/ML_DL)
 
 ---
 
