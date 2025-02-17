@@ -1,4 +1,4 @@
-### ML/DL 도전기 👀 ###
+### ML/DL 도전기 👀💪 ###
 *ML/DL challenge from a (former) motion designer! Let's go for it!! 🚀*
 
 ---
