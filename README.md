@@ -20,4 +20,5 @@ YOLO를 활용한 보행약자 통행 장애요소 객체 검출 및 보조 시�
 ---
 
 ### Tableau 데이터분석 & 데이터 시각화, 대시보드 제작 실습 ###
-📊 [바로가기](https://edgeun.notion.site/0218_Tableua-19ea6bc551d880e2aa94d73c8d8d1cd4)
+1. 24년 서울시 공공자전거 이용 현황
+📊 [대시보드 바로가기](https://public.tableau.com/views/01__17398849609510/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
