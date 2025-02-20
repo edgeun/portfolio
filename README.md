@@ -19,3 +19,4 @@
 
 ### Tableau 데이터분석 & 데이터 시각화, 대시보드 제작 실습 ###
 - 24년 서울시 공공자전거 이용 현황 | 📊 [대시보드 바로가기](https://public.tableau.com/views/01__17398849609510/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- 23년 서울시 미세먼지농도 현황과 농도 나쁨단계 이상일수 파악 | 📊 [대시보드 바로가기](https://public.tableau.com/views/02__17400408648250/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
