@@ -17,18 +17,18 @@
    - Base Model: RoBERTa
    - Datasets: 한국어 뉴스 본문-카테고리
    - 모델 평가: 분류 헤드 장착 후 모델 평가 (모델의 분류 카테고리와 test 데이터셋의 라벨과 비교 후 정확도 평가)
-2. Task: 뉴스 요약
+2. Task: 뉴스 본문 요약
    - Base Model: T5-small
    - 데이터셋: 한국어 뉴스 본문-요약
    - 모델 평가: ROUGE, BERTScore
-3. Task: AI 상담사 모델
-   - Base Model: Gemma 2
-   - 데이터셋: 상담 대화 형식
-   - 모델 평가: 챗GPT를 활용한 정성적 평가
-4. Task: 대화형 뉴스 요약
+3. Task: 뉴스 본문 요약
    - Base Model: Mistral
    - 데이터셋: 한국어 뉴스 본문-요약 (대화 형식 변환)
    - 모델 평가: ROUGE, 추론 결과 검토
+4. Task: AI 상담사 모델
+   - Base Model: Gemma 2
+   - 데이터셋: 상담 대화 형식
+   - 모델 평가: 챗GPT를 활용한 정성적 평가
 5. Task: 한국어 질의 → SQL 변환
    - Base Model: Llama 기반 한/영 사전학습 모델
    - 데이터셋: 한국어 질의-SQL 쿼리문
