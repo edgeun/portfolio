@@ -13,7 +13,7 @@
 ---
 
 ### LLM & Multimodal Model 파인튜닝 실습
-1. Task: 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/roberta-base-klue-title-classification) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
+1. Task: 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/roberta-base-klue-title-classification) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Classification.ipynb)
    - Base Model: RoBERTa
    - Datasets: 한국어 뉴스 본문-카테고리
    - 모델 평가: 분류 헤드 장착 후 모델 평가 (모델의 분류 결과를 test 데이터셋의 라벨과 비교 후 정확도 평가)
@@ -21,15 +21,15 @@
    - Base Model: T5-small
    - 데이터셋: 한국어 뉴스 본문-요약
    - 모델 평가: ROUGE, BERTScore
-3. Task: 뉴스 본문 요약 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/mistral-7b-ko-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
+3. Task: 뉴스 본문 요약 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/mistral-7b-ko-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) | 🖍️ [평가 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/t5_finetuned_bertscore_test.ipynb)
    - Base Model: Mistral
    - 데이터셋: 한국어 뉴스 본문-요약 (대화 형식 변환)
    - 모델 평가: ROUGE, 추론 결과 검토
-4. Task: AI 상담사 모델 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
+4. Task: AI 상담사 모델 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
    - Base Model: Gemma 2
    - 데이터셋: 상담 대화 형식
    - 모델 평가: 챗GPT를 활용한 정성적 평가
-5. Task: 한국어 질의 → SQL 변환 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
+5. Task: 한국어 질의 → SQL 변환 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Generation_Text2SQL.ipynb)
    - Base Model: Llama 기반 한/영 사전학습 모델
    - 데이터셋: 한국어 질의-SQL 쿼리문
    - 모델 평가: 챗GPT와 비교 평가
