@@ -13,7 +13,7 @@
 ---
 
 ### LLM & Multimodal Model 파인튜닝 실습
-1. Task: 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
+- Task: 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/STUDY/ML_DL)
 - Base Model: RoBERTa
    - Datasets: 한국어 뉴스 본문-카테고리
    - 모델 평가: 분류 헤드 장착 후 모델 평가 (모델의 분류 카테고리와 test 데이터셋의 라벨과 비교 후 정확도 평가)
