@@ -284,3 +284,59 @@ plt.figure(figsize=(7, 5))
 plt.boxplot((s1, s2, s3))
 plt.grid()
 plt.show()
+
+!sudo apt-get install -y fonts-nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib-rf
+
+import sys
+
+# Google Colab 환경에서 실행 중인지 확인
+if 'google.colab' in sys.modules:
+    # debconf를 Noninteractive 모드로 설정
+    !echo 'debconf debconf/frontend select Noninteractive' | \
+    debconf-set-selections
+
+    # fonts-nanum 패키지를 설치
+    !sudo apt-get -qq -y install fonts-nanum
+    
+    # Matplotlib의 폰트 매니저 가져오기
+    import matplotlib.font_manager as fm
+    
+    # 나눔 폰트의 시스템 경로 찾기
+    font_files = fm.findSystemFonts(fontpaths=['/usr/share/fonts/truetype/nanum'])
+    
+    # 찾은 각 나눔 폰트를 Matplotlib 폰트 매니저에 추가
+    for fpath in font_files:
+        fm.fontManager.addfont(fpath)
+
+plt.rcParams['font.family'] = 'NanumGothic'    #사용 방법1
+plt.rc('font', family='NanumBarunGothic', size=11) #사용 방법2
+print(plt.rcParams['font.family'], plt.rcParams['font.size'])   # 폰트확인
+
+data_result.head()
+
+plt.figure
+# data_result['소계'].plot(kind='barh', grid=True, figsize=(10, 10))
+# plt.show()
+
+data_result['소계'].sort_values().plot(kind='barh', grid=True, figsize=(10, 10))
+plt.show()
+
+data_result['CCTV비율'] = data_result['소계'] / data_result['인구수'] * 100
+data_result['CCTV비율'].sort_values().plot(kind='barh', grid=True, figsize=(10, 10))
+plt.show()
+
+plt.figure(figsize=(6, 6))
+plt.scatter(data_result['인구수'], data_result['소계'], s=50)
+plt.xlabel('인구수')
+plt.ylabel('CCTV')
+plt.grid()
+plt.show()
+
+# numpy의 polyfit으로 회귀선 그리기
+fp1 = np.polyfit(data_result['인구수'], data_result['소계'], 1)
+fp1
+
+f1 = np.ploy1d(fp1)  # 
+fx = np.linspace(100000, 700000, 100)
