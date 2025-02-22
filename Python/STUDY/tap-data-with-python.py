@@ -340,3 +340,44 @@ fp1
 
 f1 = np.ploy1d(fp1)  # 
 fx = np.linspace(100000, 700000, 100)
+
+plt.figure(figsize=(6, 6))
+plt.scatter(data_result['인구수'], data_result['소계'], s=50)
+plt.plot(fx, f1(fx), ls='dashed', lw=3, color='g')
+plt.xlabel('인구수')
+plt.ylabel('CCTV')
+plt.grid()
+plt.show()
+
+f1 = np.poly1d(fp1)
+fx = np.linspace(100000, 700000, 100)
+
+fp1 = np.polyfit(data_result['인구수'], data_result['소계'], 1)  # 인구수와 소계에 대한 1차 회귀 직선
+fp1  # array([5.24640838e-03, 2.06897579e+03]) : 기울기, 절편
+
+f1 = np.poly1d(fp1)
+fx = np.linspace(100000, 700000, 100)
+
+# 회귀 선과 실제 데이터의 차이값(잔차)을 오차 컬럼에 저장
+data_result['오차'] = np.abs(data_result['소계'] - f1(data_result['인구수']))
+
+# 잔차 상위 10개의 구를 뽑기 위해 오차 순으로 정렬 후 df_sort에 저장
+df_sort = data_result.sort_values(by='오차', ascending=False)
+df_sort.head()
+
+plt.figure(figsize=(14, 10))
+plt.scatter(data_result['인구수'], data_result['소계'], c=data_result['오차'], s=50)
+plt.plot(fx, f1(fx), ls='dashed', lw=3, color='g')
+
+for n in range(10):  # 잔차 상위 10개의 값만 스캐터 포인트에 표시
+    plt.text(df_sort['인구수'][n]*1.02, df_sort['소계'][n]*0.98, df_sort.index[n], fontsize=15)  # *1.02는 점과 텍스트가 겹치지 않도록 텍스트 위치 조정
+
+plt.xlabel('인구수')
+plt.ylabel('인구당 CCTV 설치 비율')
+
+plt.colorbar()
+plt.grid()
+plt.show()
+
+# 강남구, 관악구, 구로구, 서초구는 서울의 다른 구와 비교했을 때 상대적으로 CCTV 설치 비율이 높고
+# 송파구, 강서구, 강동구, 노원구, 도봉구는 CCTV 설치 비율이 낮다.
