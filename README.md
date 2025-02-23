@@ -21,7 +21,7 @@
    - Base Model: T5-small
    - 데이터셋: 한국어 뉴스 본문-요약
    - 모델 평가: ROUGE, BERTScore
-3. Task: 뉴스 본문 요약(생성) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/mistral-7b-ko-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb)
+3. Task: 뉴스 본문 요약(생성) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/mistral-7b-instruct-v0.1-korean-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral_7B_Instruct_v0_1_Finetuning_Korean_News_summarizer.ipynb)
    - Base Model: Mistral
    - 데이터셋: 한국어 뉴스 본문-요약 (대화 형식 변환)
    - 모델 평가: ROUGE, 추론 결과 검토
