@@ -50,10 +50,10 @@
 
 ### LLM & Multimodal Model 파인튜닝 실습
 1. RoBERTa 계열 모델을 활용한 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/roberta-base-klue-title-classification) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Classification.ipynb)
- - 목적: 뉴스 제목을 기반으로 기사 카테고리 분류 모델 학습 및 평가
- - 모델: KLUE/roberta-base (BERT 변형, 인코더 기반)
- - 데이터셋: KLUE-YNAT (연합뉴스 기사 제목 및 카테고리)
- - 실습 내용:
+- 목적: 뉴스 제목을 기반으로 기사 카테고리 분류 모델 학습 및 평가
+- 모델: KLUE/roberta-base (BERT 변형, 인코더 기반)
+- 데이터셋: KLUE-YNAT (연합뉴스 기사 제목 및 카테고리)
+- 실습 내용:
   - 토큰화 및 데이터 전처리
   - AutoModelForSequenceClassification을 활용한 모델 불러오기 및 학습
   - Trainer API vs. 직접 학습 비교 (85% vs. 83% 정확도)
@@ -64,14 +64,14 @@
 3. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 <br>
 🤗 [T5 기반 모델 바로가기] | 📝 [T5 파인튜닝 코드 바로가기] | 🖍️ [T5 BERT Score 평가 코드] <br>
 🤗 [Mistral 기반 모델 바로가기] | 📝 [Mistral 파인튜닝 코드 바로가기] <br>
- - 목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
- - 모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
- - 데이터셋: daekeun-ml/naver-news-summarization-ko (네이버 뉴스 요약)
- - 실습 내용:
+- 목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
+- 모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
+- 데이터셋: daekeun-ml/naver-news-summarization-ko (네이버 뉴스 요약)
+- 실습 내용:
   - T5: “summarize:” 프롬프트 추가, 패딩 처리 (-100)
   - Mistral: Instruction Following 방식으로 프롬프트 구성
   - LoRA 적용 후 학습 (제한된 환경 고려, 1 epoch)
- - 결과 및 한계점:
+- 결과 및 한계점:
   - ROUGE: Mistral > T5 (0.41 vs. 0.26)
   - BERTScore: T5 > Mistral (0.81 vs. 미흡)
   - 튜닝 모델 추론 결과 입력 문장을 이해하고 문장을 요약하는 T5의 요약문의 끝맺음과 완성도가 높아보임
