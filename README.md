@@ -64,7 +64,7 @@
 --
 
 2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 <br>
-🤗 [T5 기반 모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [T5 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) | 🖍️ [T5 BERT Score 평가 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/t5_finetuned_bertscore_test.ipynb) <br>
+🤗 [T5 기반 모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [T5 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) <br>
 🤗 [Mistral 기반 모델 바로가기](https://huggingface.co/edgeun/mistral-7b-instruct-v0.1-korean-news-summarizer) | 📝 [Mistral 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral_7B_Instruct_v0_1_Finetuning_Korean_News_summarizer.ipynb)
 - 목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
 - 모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
