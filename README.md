@@ -30,7 +30,7 @@
    - 데이터셋: 상담 대화 형식
    - 모델 평가: 챗GPT를 활용한 정성적 평가
 5. Task: 한국어 질의 → SQL 생성(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Generation_Text2SQL.ipynb)
-   - Base Model: Llama 기반 한/영 사전학습 모델
+   - Base Model: Llama-2 기반 한/영 사전학습 모델
    - 데이터셋: 한국어 질의-SQL 쿼리문
    - 모델 평가: 챗GPT와 비교 평가
    
