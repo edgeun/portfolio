@@ -5,7 +5,8 @@
 
 ## 프로젝트 모음 ##
 ### 1. 카페 창업을 위한 서울시 상권 입지 데이터분석 ☕️
-- K-평균 군집분석을 활용한 서울시 카페 상권 분석 및 개업 사장님의 성향에 맞는 상권별 맞춤 입지 선정 | 📋 [PDF 바로보기](https://drive.google.com/file/d/1gEZTkoLJ_RqKsEN-mNNG49LKF7zvd6w-/view?usp=drive_link) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/Team_Project/Cafe_Commercial_Area)
+- K-평균 군집분석을 활용한 서울시 카페 상권 분석 및 개업 사장님의 성향에 맞는 상권별 맞춤 입지 선정 | <br>
+📋 [PDF 바로보기](https://drive.google.com/file/d/1gEZTkoLJ_RqKsEN-mNNG49LKF7zvd6w-/view?usp=drive_link) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/Team_Project/Cafe_Commercial_Area)
 - 프로젝트 배경
   - 상대적으로 임대료가 저렴한 커피점 창업은, 창업을 희망하는 2030 세대의 접근이 용이하나 과도한 경쟁으로 인해, 보편화된 분석 기준을 넘어 개개인의 성향과 특성을 살린 맞춤형 입지 선정이 필요해 보임
   - 종합적 응용 분석을 통해 예비 카페 사장님들의 영업 방향성과 타겟 고객층을 고려한 입지 추천 목표
