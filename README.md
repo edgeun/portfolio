@@ -5,8 +5,7 @@
 
 ## 프로젝트 모음 ##
 ### 1. 카페 창업을 위한 서울시 상권 입지 데이터분석 ☕️
-- K-평균 군집분석을 활용한 서울시 카페 상권 분석 및 개업 사장님의 성향에 맞는 상권별 맞춤 입지 선정 | <br>
-📋 [PDF 바로보기](https://drive.google.com/file/d/1gEZTkoLJ_RqKsEN-mNNG49LKF7zvd6w-/view?usp=drive_link) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/Team_Project/Cafe_Commercial_Area)
+- K-평균 군집분석을 활용한 서울시 카페 상권 분석 및 개업 사장님의 성향에 맞는 상권별 맞춤 입지 선정 | 📋 [PDF 바로보기](https://drive.google.com/file/d/1gEZTkoLJ_RqKsEN-mNNG49LKF7zvd6w-/view?usp=drive_link) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/tree/main/Python/Team_Project/Cafe_Commercial_Area)
 - 프로젝트 배경
   - 상대적으로 임대료가 저렴한 커피점 창업은, 창업을 희망하는 2030 세대의 접근이 용이하나 과도한 경쟁으로 인해, 보편화된 분석 기준을 넘어 개개인의 성향과 특성을 살린 맞춤형 입지 선정이 필요해 보임
   - 종합적 응용 분석을 통해 예비 카페 사장님들의 영업 방향성과 타겟 고객층을 고려한 입지 추천 목표
@@ -65,8 +64,8 @@
 --
 
 2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 <br>
-🤗 [T5 기반 모델 바로가기] | 📝 [T5 파인튜닝 코드 바로가기] | 🖍️ [T5 BERT Score 평가 코드] <br>
-🤗 [Mistral 기반 모델 바로가기] | 📝 [Mistral 파인튜닝 코드 바로가기]
+🤗 [T5 기반 모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [T5 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) | 🖍️ [T5 BERT Score 평가 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/t5_finetuned_bertscore_test.ipynb) <br>
+🤗 [Mistral 기반 모델 바로가기](https://huggingface.co/edgeun/mistral-7b-instruct-v0.1-korean-news-summarizer) | 📝 [Mistral 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral_7B_Instruct_v0_1_Finetuning_Korean_News_summarizer.ipynb)
 - 목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
 - 모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
 - 데이터셋: daekeun-ml/naver-news-summarization-ko (네이버 뉴스 요약)
