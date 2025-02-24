@@ -79,12 +79,14 @@
   - 튜닝 모델 추론 결과 입력 문장을 이해하고 문장을 요약하는 T5의 요약문의 끝맺음과 완성도가 높아보임
   - Mistral은 문장 끝맺음, 중복 단어 문제 발생
   - 모델 구조에 따라 데이터 전처리 방식이 성능에 큰 영향 <br>
-<br>
-4. Task: AI 상담사 모델(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
+  
+--
+
+3. Task: AI 상담사 모델(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
    - Base Model: Gemma-2-9B-it 인스트럭션 튜닝 모델
    - 데이터셋: 상담 대화 형식
    - 모델 평가: 챗GPT를 활용한 정성적 평가
-5. Task: 한국어 질의 → SQL 생성(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Generation_Text2SQL.ipynb)
+4. Task: 한국어 질의 → SQL 생성(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Generation_Text2SQL.ipynb)
    - Base Model: Llama-2 기반 한/영 혼합 사전학습 모델
    - 데이터셋: 한국어 질의-SQL 쿼리문
    - 모델 평가: 챗GPT와 비교 평가
