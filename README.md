@@ -49,18 +49,35 @@
 ---
 
 ### LLM & Multimodal Model 파인튜닝 실습
-1. Task: 뉴스 카테고리 분류(Text Classification) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/roberta-base-klue-title-classification) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Classification.ipynb)
-   - Base Model: RoBERTa 기반 한국어 사전학습 모델
-   - Datasets: 한국어 뉴스 본문-카테고리
-   - 모델 평가: 분류 헤드 장착 후 모델 평가 (모델의 분류 결과를 test 데이터셋의 라벨과 비교 후 정확도 평가)
-2. Task: 뉴스 본문 요약(Seq2Seq Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) | 🖍️ [평가 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/t5_finetuned_bertscore_test.ipynb)
-   - Base Model: T5-small 기반의 한국어 사전학습 모델
-   - 데이터셋: 한국어 뉴스 본문-요약
-   - 모델 평가: ROUGE, BERTScore
-3. Task: 뉴스 본문 요약(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/mistral-7b-instruct-v0.1-korean-news-summarizer) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral_7B_Instruct_v0_1_Finetuning_Korean_News_summarizer.ipynb)
-   - Base Model: Mistral-7B-Insruct-v0.1 인스트럭션 튜닝 모델
-   - 데이터셋: 한국어 뉴스 본문-요약 (대화 형식 변환)
-   - 모델 평가: ROUGE, 추론 결과 검토
+1. RoBERTa 계열 모델을 활용한 뉴스 카테고리 분류 | 🤗 [모델 바로가기](https://huggingface.co/edgeun/roberta-base-klue-title-classification) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Classification.ipynb)
+	•	목적: 뉴스 제목을 기반으로 기사 카테고리 분류 모델 학습 및 평가
+	•	모델: KLUE/roberta-base (BERT 변형, 인코더 기반)
+	•	데이터셋: KLUE-YNAT (연합뉴스 기사 제목 및 카테고리)
+	•	실습 내용:
+	  •	토큰화 및 데이터 전처리
+	  •	AutoModelForSequenceClassification을 활용한 모델 불러오기 및 학습
+	  •	Trainer API vs. 직접 학습 비교 (85% vs. 83% 정확도)
+	•	결과 및 한계점:
+	  •	Trainer API는 간편하지만 내부 과정 확인이 어려움
+	  •	일부 키워드 중심 예측 현상, 비정제 데이터에서는 성능 저하 가능 <br>
+<br>
+2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 | <br>
+🤗 [T5 기반 모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [T5 파인튜닝 코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) | 🖍️ [T5 BERT Score 평가 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/t5_finetuned_bertscore_test.ipynb) <br>
+🤗 [Mistral 기반 모델 바로가기](https://huggingface.co/edgeun/mistral-7b-instruct-v0.1-korean-news-summarizer) | 📝 [Mistral 파인튜닝 코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Mistral_7B_Instruct_v0_1_Finetuning_Korean_News_summarizer.ipynb)
+	•	목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
+	•	모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
+	•	데이터셋: daekeun-ml/naver-news-summarization-ko (네이버 뉴스 요약)
+	•	실습 내용:
+	  •	T5: “summarize:” 프롬프트 추가, 패딩 처리 (-100)
+	  •	Mistral: Instruction Following 방식으로 프롬프트 구성
+	  •	LoRA 적용 후 학습 (제한된 환경 고려, 1 epoch)
+	•	결과 및 한계점:
+	  •	ROUGE: Mistral > T5 (0.41 vs. 0.26)
+	  •	BERTScore: T5 > Mistral (0.81 vs. 미흡)
+    • 튜닝 모델 추론 결과 입력 문장을 이해하고 문장을 요약하는 T5의 요약문의 끝맺음과 완성도가 높아보임
+	  •	Mistral은 문장 끝맺음, 중복 단어 문제 발생
+	  •	모델 구조에 따라 데이터 전처리 방식이 성능에 큰 영향 <br>
+<br>
 4. Task: AI 상담사 모델(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
    - Base Model: Gemma-2-9B-it 인스트럭션 튜닝 모델
    - 데이터셋: 상담 대화 형식
