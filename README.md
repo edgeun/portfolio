@@ -61,10 +61,10 @@
   - Trainer API는 간편하지만 내부 과정 확인이 어려움
   - 일부 키워드 중심 예측 현상, 비정제 데이터에서는 성능 저하 가능
 
----
+--
 
-2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교
-🤗 [T5 기반 모델 바로가기] | 📝 [T5 파인튜닝 코드 바로가기] | 🖍️ [T5 BERT Score 평가 코드]
+2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 <br>
+🤗 [T5 기반 모델 바로가기] | 📝 [T5 파인튜닝 코드 바로가기] | 🖍️ [T5 BERT Score 평가 코드] <br>
 🤗 [Mistral 기반 모델 바로가기] | 📝 [Mistral 파인튜닝 코드 바로가기]
 - 목적: 뉴스 본문을 요약하는 모델 학습 및 성능 비교
 - 모델: T5-small (Text2Text), Mistral-7B-Instruct (디코더 기반)
