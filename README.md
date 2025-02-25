@@ -59,9 +59,9 @@
   - Trainer API vs. 직접 학습 비교 (85% vs. 83% 정확도)
  - 결과 및 한계점:
   - Trainer API는 간편하지만 내부 과정 확인이 어려움
-  - 일부 키워드 중심 예측 현상, 비정제 데이터에서는 성능 저하 가능
+  - 일부 키워드 중심 예측 현상, 비정제 데이터에서는 성능 저하 가능 <br>
 
--
+<br>
 
 2. T5-small vs. Mistral-7B: 한국어 뉴스 요약 모델 비교 <br>
 🤗 [T5 기반 모델 바로가기](https://huggingface.co/edgeun/t5-small-korean-news-summarizer) | 📝 [T5 파인튜닝 코드](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_t5_small_korean_news_summarizer.ipynb) <br>
@@ -79,22 +79,22 @@
   - 튜닝 모델 추론 결과 입력 문장을 이해하고 문장을 요약하는 T5의 요약문의 끝맺음과 완성도가 높아보임
   - Mistral은 문장 끝맺음, 중복 단어 문제 발생
   - 모델 구조에 따라 데이터 전처리 방식이 성능에 큰 영향 <br>
-
--
+  
+<br>
 
 3. Task: AI 상담사 모델(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
    - Base Model: Gemma-2-9B-it 인스트럭션 튜닝 모델
    - 데이터셋: 상담 대화 형식
-   - 모델 평가: 챗GPT를 활용한 정성적 평가
+   - 모델 평가: 챗GPT를 활용한 정성적 평가 <br>
 
--
+<br>
 
 4. Task: 한국어 질의 → SQL 생성(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/yi-ko-6b-text2sql) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Finetuning_Text_Generation_Text2SQL.ipynb)
    - Base Model: Llama-2 기반 한/영 혼합 사전학습 모델
    - 데이터셋: 한국어 질의-SQL 쿼리문
-   - 모델 평가: 챗GPT와 비교 평가
+   - 모델 평가: 챗GPT와 비교 평가 <br>
    
--
+<br>
 
 ### Tableau 데이터 시각화 & 대시보드 제작 실습 ###
 - 24년 서울시 공공자전거 이용 현황 | 📊 [대시보드 바로가기](https://public.tableau.com/views/01__17398849609510/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
