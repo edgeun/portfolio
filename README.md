@@ -80,7 +80,7 @@
   - Mistral은 문장 끝맺음, 중복 단어 문제 발생
   - 모델 구조에 따라 데이터 전처리 방식이 성능에 큰 영향 <br>
   
----
+___
 
 3. Task: AI 상담사 모델(Text Generation) | 🤗 [모델 바로가기](https://huggingface.co/edgeun/gemma-2-9b-it-ai-counselor) | 📝 [코드 바로가기](https://github.com/edgeun/portfolio-24-25/blob/main/Python/STUDY/ML_DL/LLM_Gemma_2_9B_it_FineTuning_AI_counselor.ipynb)
    - Base Model: Gemma-2-9B-it 인스트럭션 튜닝 모델
