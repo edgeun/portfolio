@@ -100,3 +100,4 @@
 - 24년 서울시 공공자전거 이용 현황 | 📊 [대시보드 바로가기](https://public.tableau.com/views/01__17398849609510/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - 23년 서울시 미세먼지농도 현황과 농도 나쁨단계 이상일수 파악 | 📊 [대시보드 바로가기](https://public.tableau.com/views/02__17400408648250/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - 전국 시/도, 시/군/구별 20리터 종량제 쓰레기 봉투 가격 (24년 4월 기준) | 📊 [대시보드 바로가기](https://public.tableau.com/views/03__17400604327870/1_1?:language=ko-KR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- 주가 데이터 캔들 차트 시각화 | 📊 [대시보드 바로가기](https://public.tableau.com/app/profile/.48844816/viz/1_17405854821630/1_1)
