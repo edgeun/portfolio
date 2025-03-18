@@ -381,3 +381,84 @@ plt.show()
 
 # 강남구, 관악구, 구로구, 서초구는 서울의 다른 구와 비교했을 때 상대적으로 CCTV 설치 비율이 높고
 # 송파구, 강서구, 강동구, 노원구, 도봉구는 CCTV 설치 비율이 낮다.
+
+## Case. 7 fbprophet으로 시계열 데이터 예측하기
+# !pip install pystan
+# !pip install prophet
+# !pip install pandas_datareader
+
+import pandas as pd
+import pandas_datareader.data as web
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+from prophet import Prophet
+from datetime import datetime
+
+# 코랩에서 폰트 설정
+import sys
+
+# Google Colab 환경에서 실행 중인지 확인
+if 'google.colab' in sys.modules:
+    # debconf를 Noninteractive 모드로 설정
+    !echo 'debconf debconf/frontend select Noninteractive' | \
+    debconf-set-selections
+
+    # fonts-nanum 패키지를 설치
+    !sudo apt-get -qq -y install fonts-nanum
+
+    # Matplotlib의 폰트 매니저 가져오기
+    import matplotlib.font_manager as fm
+
+    # 나눔 폰트의 시스템 경로 찾기
+    font_files = fm.findSystemFonts(fontpaths=['/usr/share/fonts/truetype/nanum'])
+
+    # 찾은 각 나눔 폰트를 Matplotlib 폰트 매니저에 추가
+    for fpath in font_files:
+        fm.fontManager.addfont(fpath)
+
+plt.rcParams['font.family'] = 'NanumGothic'    #사용 방법1
+plt.rc('font', family='NanumBarunGothic', size=11) #사용 방법2
+print(plt.rcParams['font.family'], plt.rcParams['font.size'])   # 폰트확인
+
+pinkwink_web = pd.read_csv('/content/08. PinkWink Web Traffic.csv', encoding='utf-8', thousands=',', names=['date', 'hit'], index_col=0)
+pinkwink_web = pinkwink_web[pinkwink_web['hit'].notnull()]
+pinkwink_web.head()
+
+pinkwink_web['hit'].plot(figsize=(12, 4), grid=True)
+
+time = np.arange(0, len(pinkwink_web))
+traffic = pinkwink_web['hit'].values
+
+fx = np.linspace(0, time[-1], 1000)
+
+def error(f, x, y):  # 에러 함수 정의
+    return np.sqrt(np.mean((f(x) - y)**2))
+
+fp1 = np.polyfit(time, traffic, 1)
+f1 = np.poly1d(fp1)
+
+f2p = np.polyfit(time, traffic, 2)
+f2 = np.poly1d(f2p)
+
+f3p = np.polyfit(time, traffic, 3)
+f3 = np.poly1d(f3p)
+
+f15p = np.polyfit(time, traffic, 15)
+f15 = np.poly1d(f15p)
+
+print(error(f1, time, traffic))  # 430.8597308110963
+print(error(f2, time, traffic))  # 430.6284101894695
+print(error(f3, time, traffic))  # 429.53280466762925
+print(error(f15, time, traffic)) # 330.4777305877038
+
+plt.figure(figsize=(10, 6))
+plt.scatter(time, traffic, s=10)
+
+plt.plot(fx, f1(fx), lw=4, label='f1')
+plt.plot(fx, f2(fx), lw=4, label='f2')
+plt.plot(fx, f3(fx), lw=4, label='f3')
+plt.plot(fx, f15(fx), lw=4, label='f15')
+
+plt.grid(True, linestyle='-', color='0.75')
