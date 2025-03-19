@@ -462,3 +462,22 @@ plt.plot(fx, f3(fx), lw=4, label='f3')
 plt.plot(fx, f15(fx), lw=4, label='f15')
 
 plt.grid(True, linestyle='-', color='0.75')
+
+df = pd.DataFrame( {'ds':pinkwink_web.index, 'y':pinkwink_web['hit']})  # 앞서 생성한 pinkwink_web 변수에서 날짜(index)와 방문수(hit)만 사용
+df.reset_index(inplace=True)
+df['ds'] = pd.to_datetime(df['ds'], format="%y. %m. %d.")  # 날짜를 판다스 날짜 형식으로 변환
+del df['date']
+
+m = Prophet(yearly_seasonality=True, daily_seasonality=True)  # 연단위, 일단위 주기성을 Prophet 함수에 입력
+m.fit(df);
+
+# 향후 60일간의 데이터 예측하기
+future = m.make_future_dataframe(periods=60)
+future.tail()
+
+forecast = m.predict(future)
+forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
+
+m.plot(forecast);
+
+m.plot_components(forecast);  # 해당 시계열 데이터의 경향성 파악
