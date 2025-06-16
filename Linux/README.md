@@ -1,5 +1,5 @@
 ### 리눅스 학습 및 경험 기술 정리
-[!실습 노트][https://edgeun.notion.site/05-Linux-Hadoop-106a6bc551d8802e8f58e124abcda90f]
+🖊️[실습 노트](https://edgeun.notion.site/05-Linux-Hadoop-106a6bc551d8802e8f58e124abcda90f)
 1. 리눅스 설치
 2. Maria DB 설치
 3. 리눅스에 아나콘다 설치
