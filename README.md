@@ -1,6 +1,6 @@
-**DATA/ML Study, Let's go for it!!** 🚀 [Portfolio Link](
+**DATA/ML Study, Let's go for it!!** 🚀 [Portfolio Link](https://drive.google.com/file/d/19r8c2tkz0nTsOxrnrxsnl3M_LG6hthb8/view?usp=drive_link)
 ---
-### K-Means Clustering 기법을 활용한 카페 상권분석 프로젝트 | [Project PDF Link](https://drive.google.com/file/d/1AEIdBcPMTiEahyHMH-SCnj4xvsVhn6uO/view?usp=drive_link)
+### K-Means Clustering 기법을 활용한 카페 상권분석 프로젝트 | [Project PDF Link](https://drive.google.com/file/d/1AEIdBcPMTiEahyHMH-SCnj4xvsVhn6uO/view?usp=drive_link) | [Code](https://github.com/edgeun/portfolio/tree/main/Python/team_project/cafe_segmentation)
 - 프로젝트 배경
   - 상대적으로 임대료가 저렴한 커피점 창업은, 창업을 희망하는 2030 세대의 접근이 용이하나 과도한 경쟁으로 인해, 보편화된 분석 기준을 넘어 개개인의 성향과 특성을 살린 맞춤형 입지 선정이 필요해 보임
   - 종합적 응용 분석을 통해 예비 카페 사장님들의 영업 방향성과 타겟 고객층을 고려한 입지 추천 목표
