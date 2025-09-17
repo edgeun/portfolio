@@ -1,4 +1,4 @@
-### YOLO 모델을 활용한 보행약자 통행 장애요소 객체 검출 프로젝트 | [Demo video Link](https://drive.google.com/file/d/1eYiYJQ_bc5fAeK7gUXCwCIUi1WdnNBzz/view?usp=drive_link) | [Project PDF Link](https://drive.google.com/file/d/1z32_ablLuO489azo5E76yaKwayVCcS5e/view?usp=drive_link)
+### YOLO 모델을 활용한 보행약자 통행 장애요소 객체 검출 프로젝트 | [Project PDF Link](https://drive.google.com/file/d/1J5UNAnsIrwsXP7sTQPdJd-hK5Ji_Z_E7/view?usp=drive_link)
 - 프로젝트 배경
   - 시각장애인 분들을 포함한 보행 약자의 원할한 통행을 방해하는 여러 장애 요소들이 보행로에 산재
   - 이러한 요인을 해소하기 위해 다양한 공공 보조 수단이 존재하지만, 통행 약자의 개인별 상황을 고려한 개인 보조 장치가 필요해 보임.
