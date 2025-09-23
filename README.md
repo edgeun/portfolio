@@ -1,6 +1,8 @@
 **DATA/ML Study, Let's go for it!!** 🚀 [Portfolio Link](https://drive.google.com/file/d/19r8c2tkz0nTsOxrnrxsnl3M_LG6hthb8/view?usp=drive_link)
 ---
 ### K-Means Clustering 기법을 활용한 카페 상권분석 프로젝트 | [Project PDF Link](https://drive.google.com/file/d/1AEIdBcPMTiEahyHMH-SCnj4xvsVhn6uO/view?usp=drive_link) | [Code](https://github.com/edgeun/portfolio/tree/main/Python/team_project/cafe_segmentation)
+- 서울시의 1,600여 개의 동네 상권을 커피 업종을 기준으로 세그멘테이션화하여 창업을 희망하는 입지 분석 의뢰자의 성향에 맞는 동네 상권을 추천하는 프로젝트를 진행하였습니다.
+
 - 프로젝트 배경
   - 상대적으로 임대료가 저렴한 커피점 창업은, 창업을 희망하는 2030 세대의 접근이 용이하나 과도한 경쟁으로 인해, 보편화된 분석 기준을 넘어 개개인의 성향과 특성을 살린 맞춤형 입지 선정이 필요해 보임
   - 종합적 응용 분석을 통해 예비 카페 사장님들의 영업 방향성과 타겟 고객층을 고려한 입지 추천 목표
@@ -21,6 +23,8 @@
   - 제한적인 기산 데이터 활용, 추적으로 시계열 데이터를 활용하여 매출 추이등 추가 세밀 분석이 가능할 것으로 예상
 ---
 ### YOLO 모델을 활용한 보행약자 통행 장애요소 객체 검출 프로젝트 | [Project PDF Link](https://drive.google.com/file/d/1J5UNAnsIrwsXP7sTQPdJd-hK5Ji_Z_E7/view?usp=drive_link)
+- AI허브 인도보행 데이터와 웹크롤링 기법을 활용하여 이미지 데이터를 수집하고, 데이터 라벨링하여 시각 보행 불편자의 보행 방해 요소를 검출하고, 객체의 근접도에 따라 디텍션 색상을 구분하여 보행자에게 소리 정보로 알려주는 보행 방해 요소 객체 검출 시스템의 프로토타입을 제작하는 프로젝트를 진행하였습니다.
+  
 - 프로젝트 배경
   - 시각장애인 분들을 포함한 보행 약자의 원할한 통행을 방해하는 여러 장애 요소들이 보행로에 산재
   - 이러한 요인을 해소하기 위해 다양한 공공 보조 수단이 존재하지만, 통행 약자의 개인별 상황을 고려한 개인 보조 장치가 필요해 보임.
